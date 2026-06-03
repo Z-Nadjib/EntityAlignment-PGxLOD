@@ -1,0 +1,32 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---------- Model weights & tensors (anywhere in the repo) ----------
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.h5
+*.onnx
+*.bin
+
+# ---------- Data (CSV symlink + split cache, rebuilt by src.benchmark) ----------
+Data/
+
+# ---------- Local-only files ----------
+GIT_PUSH_PLAN.md
+/txt
+experiments/
+.claude/
+.Claude/
+
+# ---------- OS / editors ----------
+.DS_Store
+.vscode/
+.idea/
