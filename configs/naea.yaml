@@ -1,0 +1,47 @@
+# =============================================================================
+#  NAEA - Zhu et al., IJCAI 2019 (https://www.ijcai.org/proceedings/2019/0269.pdf)
+#  Regimes: sameAs, closeMatch, relatedMatch   (the regime is given by --regime)
+#  Hyperparameters: default recipe
+#  experiment.seed is the model seed; the split seed is data.seed (default 2024).
+# =============================================================================
+experiment: {name: naea, model: naea, seed: 2026, device: cuda}
+data: {csv_dir: Data/pgxlod_csv, cache_dir: Data/cache}
+model: {embed_dim: 200, init: xavier, normalize_embeddings: true, attn_heads: 1, attn_dropout: 0.0,
+  neighbor_message: trans, max_neighbors: 50, encode_chunk: 4096}
+train:
+  epochs: 400
+  batch_size: 8192
+  align_batch_size: 2048
+  lr: 0.001
+  optimizer: adam
+  weight_decay: 0.0
+  grad_clip: 0.0
+  early_stop_patience: 15
+  neg_samples: 10
+  margin_kge: 1.0
+  align_pos_margin: 0.0
+  align_neg_margin: 1.0
+  align_neg_weight: 1.0
+  align_loss_weight: 5.0
+  hard_negatives: {enabled: false, num_candidates: 50, refresh_every: 5, start_epoch: 10}
+  bootstrap: {enabled: true, start_epoch: 30, every: 5, threshold: 0.7, pseudo_weight: 1.0,
+    max_add: 9000}
+eval:
+  every: 10
+  hits_at: [1, 5, 10]
+  metric: csls
+  csls_k: 3
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots: {loss_curve: loss_curve.png, ranking_metrics: ranking_metrics.png}
+  log_level: INFO
