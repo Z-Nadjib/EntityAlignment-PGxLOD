@@ -1,0 +1,30 @@
+# =============================================================================
+#  JAPE (structure channel) - Sun et al., ISWC 2017 (https://arxiv.org/abs/1708.05045)
+#  Regimes: broadMatch/pgx, broadMatch/onco   (the regime is given by --regime)
+#  Hyperparameters: embedding 400; link triples, squared energy, normalised relations (chosen on validation)
+#  experiment.seed is the model seed; the split seed is data.seed (default 2024).
+# =============================================================================
+experiment: {name: jape, model: jape, seed: 2026, device: cuda}
+data: {csv_dir: Data/pgxlod_csv, cache_dir: Data/cache}
+model: {embed_dim: 400, init: xavier, normalize_embeddings: true, squared: true, normalize_relations: true}
+train: {epochs: 400, batch_size: 8192, lr: 0.01, optimizer: adam, weight_decay: 0.0,
+  grad_clip: 0.0, early_stop_patience: 15, neg_samples: 10, margin: 1.0, merge: link}
+eval:
+  every: 10
+  hits_at: [1, 5, 10]
+  metric: csls
+  csls_k: 3
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots: {loss_curve: loss_curve.png, ranking_metrics: ranking_metrics.png}
+  log_level: INFO

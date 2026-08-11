@@ -1,0 +1,32 @@
+# =============================================================================
+#  KECG - Li et al., EMNLP 2019 (https://aclanthology.org/D19-1274.pdf)
+#  Regimes: broadMatch/pgx, broadMatch/onco   (the regime is given by --regime)
+#  Hyperparameters: tuned on this relation, embedding 128 -> 256
+#  experiment.seed is the model seed; the split seed is data.seed (default 2024).
+# =============================================================================
+experiment: {name: kecg, model: kecg, seed: 2026, device: cuda}
+data: {csv_dir: Data/pgxlod_csv, cache_dir: Data/cache}
+model: {embed_dim: 256, n_layers: 2, n_heads: 2, attn_dropout: 0.0, normalize_embeddings: false,
+  instance_normalization: false}
+train: {epochs: 1000, lr: 0.005, optimizer: adagrad, weight_decay: 0.0, grad_clip: 0.0,
+  early_stop_patience: 12, margin_cg: 3.0, margin_ke: 3.0, k_cg: 25, k_ke: 2, use_nns: true,
+  update_num: 5, ke_batch_size: 100000}
+eval:
+  every: 25
+  hits_at: [1, 5, 10]
+  metric: csls
+  csls_k: 3
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots: {loss_curve: loss_curve.png, ranking_metrics: ranking_metrics.png}
+  log_level: INFO
