@@ -1,0 +1,30 @@
+# =============================================================================
+#  MRAEA - Mao et al., WSDM 2020 (https://dl.acm.org/doi/10.1145/3336191.3371804)
+#  Regimes: related   (the regime is given by --regime)
+#  Hyperparameters: tuned on this relation, dim 200, 1 head, lr 0.005, select multiref
+#  experiment.seed is the model seed; the split seed is data.seed (default 2024).
+# =============================================================================
+experiment: {name: mraea, model: mraea, seed: 2026, device: cuda}
+data: {csv_dir: Data/pgxlod_csv, cache_dir: Data/cache}
+model: {node_hidden: 200, rel_hidden: 200, depth: 2, attn_heads: 1, dropout: 0.05}
+train: {turns: 4, epoch_per_turn: 150, epochs: 600, lr: 0.005, optimizer: adam, rms_alpha: 0.9,
+  rms_eps: 1.0e-07, weight_decay: 0.0, gamma: 3.0, csls_k: 10, early_stop_patience: 6}
+eval:
+  every: 25
+  hits_at: [1, 5, 10]
+  metric: csls
+  csls_k: 10
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots: {loss_curve: loss_curve.png, ranking_metrics: ranking_metrics.png}
+  log_level: INFO
