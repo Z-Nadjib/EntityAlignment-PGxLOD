@@ -1,0 +1,59 @@
+experiment:
+  name: alinet_sameAs
+  model: alinet
+  seed: 2026
+  device: cuda:0
+data:
+  csv_dir: Data/pgxlod_csv
+  cache_dir: Data/cache
+  regime: sameAs
+model:
+  embed_dim: 300
+  layer_dims:
+  - 300
+  - 300
+  max_two_hop: 10
+  dropout: 0.0
+  normalize_embeddings: true
+train:
+  epochs: 2400
+  lr: 0.001
+  optimizer: adam
+  weight_decay: 0.0
+  grad_clip: 0.0
+  neg_samples: 5
+  align_margin: 1.0
+  early_stop_patience: 15
+  relation:
+    enabled: true
+    weight: 1.0
+    margin: 1.0
+    batch_size: 20000
+  epoch_per_turn: 2400
+eval:
+  every: 25
+  hits_at:
+  - 1
+  - 5
+  - 10
+  metric: csls
+  csls_k: 3
+  select: filtered
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots:
+    loss_curve: loss_curve.png
+    ranking_metrics: ranking_metrics.png
+  log_level: INFO
+_project_root: .
+_config_path: configs/alinet.yaml
+_run_dir: experiments/alinet_sameAs_20260929-155529

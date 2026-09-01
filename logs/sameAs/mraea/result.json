@@ -1,0 +1,96 @@
+{
+  "model": "mraea",
+  "regime": "sameAs",
+  "config": "mraea.yaml",
+  "seed": 2026,
+  "data_seed": 2024,
+  "selection": {
+    "block": "filtered",
+    "on": "validation carved from train",
+    "best_validation_MRR": 0.9918774721300805,
+    "best_epoch": 20
+  },
+  "minutes": 0.2,
+  "split": {
+    "relation": "sameAs",
+    "family": null,
+    "oriented": false,
+    "gold_pairs": 66473,
+    "clusters": 5138,
+    "train_clusters": 1094,
+    "test_clusters": 4044,
+    "test_queries": 10883,
+    "train_pairs": 19942,
+    "test_pairs": 46531,
+    "pair_test_ratio": 0.7,
+    "max_cluster_share": 0.251,
+    "splittable": true,
+    "intra_cluster": false,
+    "intra_cluster_mode": null,
+    "anti_leak": true,
+    "leak_ratio": 0.0
+  },
+  "pairs": {
+    "fit": 14956,
+    "validation": 4986,
+    "test": 46531
+  },
+  "final": {
+    "cosine": {
+      "filtered": {
+        "MRR": 0.999902799377916,
+        "Hit@1": 0.9998055987558321,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.000194401244168,
+        "n": 25720
+      },
+      "multiref": {
+        "MRR": 0.9995,
+        "Hit@1": 0.999,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.001,
+        "n": 3000
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "csls": {
+      "filtered": {
+        "MRR": 0.9866113164013193,
+        "Hit@1": 0.980054432348367,
+        "Hit@5": 0.9960342146189736,
+        "Hit@10": 0.9996500777604976,
+        "MeanRank": 1.0603421461897355,
+        "n": 25720
+      },
+      "multiref": {
+        "MRR": 0.9529061515557756,
+        "Hit@1": 0.9293333333333333,
+        "Hit@5": 0.9873333333333333,
+        "Hit@10": 0.9973333333333333,
+        "MeanRank": 1.2516666666666667,
+        "n": 3000
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "classification": {
+      "Precision": 0.6827309236947792,
+      "Recall": 0.9633333333333334,
+      "F1": 0.7991151665975391,
+      "score": "cosine",
+      "threshold": 0.9996311068534851,
+      "threshold_from": "validation",
+      "validation_F1": 0.7981510015408321,
+      "tol_k": 10,
+      "n_pos": 3000,
+      "n_neg": 3000
+    }
+  }
+}

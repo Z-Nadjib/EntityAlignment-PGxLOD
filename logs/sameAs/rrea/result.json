@@ -1,0 +1,96 @@
+{
+  "model": "rrea",
+  "regime": "sameAs",
+  "config": "rrea.yaml",
+  "seed": 2026,
+  "data_seed": 2024,
+  "selection": {
+    "block": "filtered",
+    "on": "validation carved from train",
+    "best_validation_MRR": 0.9877540615020554,
+    "best_epoch": 30
+  },
+  "minutes": 0.2,
+  "split": {
+    "relation": "sameAs",
+    "family": null,
+    "oriented": false,
+    "gold_pairs": 66473,
+    "clusters": 5138,
+    "train_clusters": 1094,
+    "test_clusters": 4044,
+    "test_queries": 10883,
+    "train_pairs": 19942,
+    "test_pairs": 46531,
+    "pair_test_ratio": 0.7,
+    "max_cluster_share": 0.251,
+    "splittable": true,
+    "intra_cluster": false,
+    "intra_cluster_mode": null,
+    "anti_leak": true,
+    "leak_ratio": 0.0
+  },
+  "pairs": {
+    "fit": 14956,
+    "validation": 4986,
+    "test": 46531
+  },
+  "final": {
+    "cosine": {
+      "filtered": {
+        "MRR": 0.9998282789009849,
+        "Hit@1": 0.9996889580093312,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.0004276827371694,
+        "n": 25720
+      },
+      "multiref": {
+        "MRR": 0.9987777777777779,
+        "Hit@1": 0.9976666666666667,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.0026666666666666,
+        "n": 3000
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "csls": {
+      "filtered": {
+        "MRR": 0.9800076145027928,
+        "Hit@1": 0.9713452566096423,
+        "Hit@5": 0.9932737169517885,
+        "Hit@10": 0.9992612752721617,
+        "MeanRank": 1.099319595645412,
+        "n": 25720
+      },
+      "multiref": {
+        "MRR": 0.916038682344011,
+        "Hit@1": 0.8746666666666667,
+        "Hit@5": 0.9763333333333334,
+        "Hit@10": 0.9946666666666667,
+        "MeanRank": 1.4341666666666666,
+        "n": 3000
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "classification": {
+      "Precision": 0.6141864366163432,
+      "Recall": 0.8543333333333333,
+      "F1": 0.7146242855151261,
+      "score": "cosine",
+      "threshold": 0.9993215203285217,
+      "threshold_from": "validation",
+      "validation_F1": 0.7225172074729597,
+      "tol_k": 10,
+      "n_pos": 3000,
+      "n_neg": 3000
+    }
+  }
+}
