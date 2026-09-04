@@ -1,0 +1,95 @@
+05:22:49 | INFO    | Model: bootea | seed 2026 | device: cuda:0
+05:22:49 | INFO    | Regime closeMatch | graph: 84,182 nodes, 131,238 triples, 50,435 UCPGx candidates
+05:22:49 | INFO    |   broadMatch/pgx   train=  3,744 test=  8,599 (70%) queries= 6,866 by cluster    leakage=0.00%
+05:22:49 | INFO    |   closeMatch       train=  2,738 test=  6,296 (70%) queries= 1,490 by cluster    leakage=0.00%
+05:22:49 | INFO    |   sameAs           train= 19,942 test= 46,531 (70%) queries=10,883 by cluster    leakage=0.00%
+05:22:49 | INFO    |   broadMatch/onco  train= 25,039 test= 47,737 (66%) queries= 2,032 intra-cluster leakage=0.00%
+05:22:49 | INFO    |   relatedMatch     train=  2,801 test=  6,289 (69%) queries=   812 intra-cluster leakage=0.00%
+05:22:49 | INFO    |   related          train=471,647 test=762,046 (62%) queries=16,977 intra-cluster leakage=0.00%
+05:22:49 | INFO    | Data: {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2053, 'val_pairs': 685, 'candidates': 50435, 'unlabeled_pool': 49550}
+05:22:51 | INFO    | Params: 6.31M
+05:22:51 | INFO    | Run directory: experiments/bootea_closeMatch_20260929-052248
+05:22:51 | INFO    | BootEA | device=cuda:0 | {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2053, 'val_pairs': 685, 'candidates': 50435, 'unlabeled_pool': 49550} triples(+swap)=140666
+05:22:53 | INFO    | epoch   20/1000 | loss=2434.4738 kge=2433.9400 align=0.0534 pseudo=0.0000 | eps-trunc refreshed
+05:22:53 | INFO    |            [filtered] MRR=0.5439 Hit@1=0.4255 Hit@5=0.7664 Hit@10=0.8073 MR=43.1 n=1370
+05:22:53 | INFO    |            [multiref] MRR=0.6247 Hit@1=0.5273 Hit@5=0.7492 Hit@10=0.8103 MR=54.7 n=311
+05:22:53 | INFO    |            -> new best multiref MRR=0.6247 (saved model_best.pt)
+05:22:54 | INFO    | epoch   30/1000 | loss=6405.2419 kge=6404.4191 align=0.0823 pseudo=0.0000 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:55 | INFO    | epoch   35/1000 | loss=6476.8473 kge=6475.7776 align=0.0846 pseudo=0.2233 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:56 | INFO    | epoch   40/1000 | loss=6189.7588 kge=6188.7859 align=0.0764 pseudo=0.2087 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:56 | INFO    |            [filtered] MRR=0.2055 Hit@1=0.1401 Hit@5=0.2737 Hit@10=0.3131 MR=370.7 n=1370
+05:22:56 | INFO    |            [multiref] MRR=0.4918 Hit@1=0.4019 Hit@5=0.6013 Hit@10=0.6752 MR=129.1 n=311
+05:22:57 | INFO    | epoch   45/1000 | loss=6367.5410 kge=6366.5604 align=0.0787 pseudo=0.1936 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:58 | INFO    | epoch   50/1000 | loss=6228.2078 kge=6227.2699 align=0.0754 pseudo=0.1836 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:58 | INFO    | epoch   55/1000 | loss=6152.0667 kge=6151.1473 align=0.0748 pseudo=0.1712 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:59 | INFO    | epoch   60/1000 | loss=6057.0715 kge=6056.1967 align=0.0711 pseudo=0.1638 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:22:59 | INFO    |            [filtered] MRR=0.1802 Hit@1=0.1358 Hit@5=0.2234 Hit@10=0.2708 MR=637.7 n=1370
+05:22:59 | INFO    |            [multiref] MRR=0.4814 Hit@1=0.4116 Hit@5=0.5659 Hit@10=0.6656 MR=216.2 n=311
+05:23:00 | INFO    | epoch   65/1000 | loss=6155.1876 kge=6154.3078 align=0.0726 pseudo=0.1537 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:01 | INFO    | epoch   70/1000 | loss=6077.4245 kge=6076.5554 align=0.0721 pseudo=0.1482 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:02 | INFO    | epoch   75/1000 | loss=6041.9986 kge=6041.1426 align=0.0716 pseudo=0.1396 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:03 | INFO    | epoch   80/1000 | loss=5970.4148 kge=5969.5913 align=0.0688 pseudo=0.1360 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:03 | INFO    |            [filtered] MRR=0.1782 Hit@1=0.1372 Hit@5=0.2241 Hit@10=0.2591 MR=896.1 n=1370
+05:23:03 | INFO    |            [multiref] MRR=0.4832 Hit@1=0.4180 Hit@5=0.5691 Hit@10=0.6463 MR=314.7 n=311
+05:23:04 | INFO    | epoch   85/1000 | loss=6055.9788 kge=6055.1482 align=0.0702 pseudo=0.1283 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:05 | INFO    | epoch   90/1000 | loss=5987.4481 kge=5986.6265 align=0.0696 pseudo=0.1255 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:05 | INFO    | epoch   95/1000 | loss=5976.7125 kge=5975.9089 align=0.0684 pseudo=0.1198 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:06 | INFO    | epoch  100/1000 | loss=5915.1040 kge=5914.3246 align=0.0661 pseudo=0.1181 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:06 | INFO    |            [filtered] MRR=0.1764 Hit@1=0.1314 Hit@5=0.2146 Hit@10=0.2620 MR=1118.8 n=1370
+05:23:06 | INFO    |            [multiref] MRR=0.4761 Hit@1=0.4051 Hit@5=0.5402 Hit@10=0.6399 MR=421.6 n=311
+05:23:07 | INFO    | epoch  105/1000 | loss=5981.9426 kge=5981.1607 align=0.0670 pseudo=0.1118 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:08 | INFO    | epoch  110/1000 | loss=5943.9501 kge=5943.1668 align=0.0672 pseudo=0.1109 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:09 | INFO    | epoch  115/1000 | loss=5925.2350 kge=5924.4617 align=0.0668 pseudo=0.1051 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:10 | INFO    | epoch  120/1000 | loss=5885.1670 kge=5884.4150 align=0.0646 pseudo=0.1061 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:10 | INFO    |            [filtered] MRR=0.1740 Hit@1=0.1328 Hit@5=0.2095 Hit@10=0.2591 MR=1227.8 n=1370
+05:23:10 | INFO    |            [multiref] MRR=0.4734 Hit@1=0.4084 Hit@5=0.5370 Hit@10=0.6399 MR=499.8 n=311
+05:23:10 | INFO    | epoch  125/1000 | loss=5937.4215 kge=5936.6649 align=0.0656 pseudo=0.1007 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:11 | INFO    | epoch  130/1000 | loss=5907.8113 kge=5907.0526 align=0.0658 pseudo=0.1010 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:12 | INFO    | epoch  135/1000 | loss=5886.3099 kge=5885.5609 align=0.0652 pseudo=0.0971 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:13 | INFO    | epoch  140/1000 | loss=5856.3093 kge=5855.5766 align=0.0636 pseudo=0.0963 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:13 | INFO    |            [filtered] MRR=0.1702 Hit@1=0.1285 Hit@5=0.2095 Hit@10=0.2547 MR=1207.5 n=1370
+05:23:13 | INFO    |            [multiref] MRR=0.4651 Hit@1=0.3987 Hit@5=0.5370 Hit@10=0.6302 MR=481.8 n=311
+05:23:14 | INFO    | epoch  145/1000 | loss=5911.1626 kge=5910.4308 align=0.0639 pseudo=0.0932 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:15 | INFO    | epoch  150/1000 | loss=5881.7464 kge=5881.0176 align=0.0636 pseudo=0.0927 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:16 | INFO    | epoch  155/1000 | loss=5866.0517 kge=5865.3312 align=0.0631 pseudo=0.0891 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:16 | INFO    | epoch  160/1000 | loss=5830.9917 kge=5830.2819 align=0.0621 pseudo=0.0889 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:16 | INFO    |            [filtered] MRR=0.1703 Hit@1=0.1285 Hit@5=0.2109 Hit@10=0.2547 MR=1353.7 n=1370
+05:23:16 | INFO    |            [multiref] MRR=0.4700 Hit@1=0.4019 Hit@5=0.5466 Hit@10=0.6463 MR=517.1 n=311
+05:23:17 | INFO    | epoch  165/1000 | loss=5879.2586 kge=5878.5416 align=0.0631 pseudo=0.0861 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:18 | INFO    | epoch  170/1000 | loss=5851.6246 kge=5850.9112 align=0.0627 pseudo=0.0866 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:19 | INFO    | epoch  175/1000 | loss=5847.9536 kge=5847.2469 align=0.0623 pseudo=0.0832 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:20 | INFO    | epoch  180/1000 | loss=5813.7086 kge=5813.0060 align=0.0619 pseudo=0.0834 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:20 | INFO    |            [filtered] MRR=0.1704 Hit@1=0.1263 Hit@5=0.2102 Hit@10=0.2606 MR=1495.9 n=1370
+05:23:20 | INFO    |            [multiref] MRR=0.4736 Hit@1=0.4084 Hit@5=0.5434 Hit@10=0.6495 MR=560.3 n=311
+05:23:21 | INFO    | epoch  185/1000 | loss=5863.6970 kge=5862.9944 align=0.0621 pseudo=0.0813 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:22 | INFO    | epoch  190/1000 | loss=5840.5859 kge=5839.8860 align=0.0618 pseudo=0.0819 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:22 | INFO    | epoch  195/1000 | loss=5825.8920 kge=5825.1993 align=0.0614 pseudo=0.0788 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:23 | INFO    | epoch  200/1000 | loss=5798.1093 kge=5797.4172 align=0.0612 pseudo=0.0797 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:23 | INFO    |            [filtered] MRR=0.1675 Hit@1=0.1255 Hit@5=0.2102 Hit@10=0.2569 MR=1555.2 n=1370
+05:23:23 | INFO    |            [multiref] MRR=0.4600 Hit@1=0.3923 Hit@5=0.5402 Hit@10=0.6431 MR=585.5 n=311
+05:23:24 | INFO    | epoch  205/1000 | loss=5845.4847 kge=5844.7987 align=0.0609 pseudo=0.0774 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:25 | INFO    | epoch  210/1000 | loss=5818.4393 kge=5817.7532 align=0.0608 pseudo=0.0779 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:26 | INFO    | epoch  215/1000 | loss=5808.8269 kge=5808.1498 align=0.0602 pseudo=0.0749 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:27 | INFO    | epoch  220/1000 | loss=5787.8086 kge=5787.1283 align=0.0605 pseudo=0.0757 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:27 | INFO    |            [filtered] MRR=0.1721 Hit@1=0.1321 Hit@5=0.2102 Hit@10=0.2569 MR=1609.8 n=1370
+05:23:27 | INFO    |            [multiref] MRR=0.4699 Hit@1=0.4116 Hit@5=0.5370 Hit@10=0.6399 MR=599.8 n=311
+05:23:28 | INFO    | epoch  225/1000 | loss=5835.5868 kge=5834.9089 align=0.0603 pseudo=0.0747 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:28 | INFO    | epoch  230/1000 | loss=5815.2688 kge=5814.5942 align=0.0600 pseudo=0.0745 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:29 | INFO    | epoch  235/1000 | loss=5792.8521 kge=5792.1806 align=0.0599 pseudo=0.0725 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:30 | INFO    | epoch  240/1000 | loss=5775.8047 kge=5775.1404 align=0.0592 pseudo=0.0728 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:30 | INFO    |            [filtered] MRR=0.1740 Hit@1=0.1343 Hit@5=0.2066 Hit@10=0.2620 MR=1590.5 n=1370
+05:23:30 | INFO    |            [multiref] MRR=0.4738 Hit@1=0.4148 Hit@5=0.5241 Hit@10=0.6431 MR=603.3 n=311
+05:23:31 | INFO    | epoch  245/1000 | loss=5818.3412 kge=5817.6788 align=0.0592 pseudo=0.0708 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:32 | INFO    | epoch  250/1000 | loss=5800.2896 kge=5799.6306 align=0.0588 pseudo=0.0711 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:33 | INFO    | epoch  255/1000 | loss=5780.3851 kge=5779.7284 align=0.0587 pseudo=0.0694 | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:33 | INFO    | epoch  260/1000 | loss=5765.7236 kge=5765.0647 align=0.0589 pseudo=0.0697 | eps-trunc refreshed | bootstrap: 9000 pseudo-pairs (beta=1.0)
+05:23:33 | INFO    |            [filtered] MRR=0.1747 Hit@1=0.1350 Hit@5=0.2117 Hit@10=0.2613 MR=1599.7 n=1370
+05:23:33 | INFO    |            [multiref] MRR=0.4752 Hit@1=0.4148 Hit@5=0.5402 Hit@10=0.6431 MR=573.4 n=311
+05:23:34 | INFO    |            early stop (best=0.6247 @ 20).
+05:23:34 | INFO    | Done in 0.7 min. Best multiref MRR=0.6247 @ epoch 20.
+05:23:34 | INFO    | Final evaluation on the test split, read once
+05:23:34 | INFO    |   [cosine] filtMRR=0.3160 H@1=0.2234 H@10=0.5148 n=12592 | mrefMRR=0.6175 H@1=0.5228
+05:23:35 | INFO    |   [  csls] filtMRR=0.2636 H@1=0.1761 H@10=0.4696 n=12592 | mrefMRR=0.6222 H@1=0.5295
+05:23:37 | INFO    |   [cosine] F1=0.5698 P=0.4362 R=0.8215 (threshold 0.719 from validation, validation F1=0.5609)
+05:23:37 | INFO    | Wrote experiments/bootea_closeMatch_20260929-052248/result.json
+05:23:37 | INFO    | Finished. Best validation MRR=0.6247 @ epoch 20.
