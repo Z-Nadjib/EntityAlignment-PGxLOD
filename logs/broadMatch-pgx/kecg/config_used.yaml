@@ -1,0 +1,57 @@
+experiment:
+  name: kecg_broadMatch-pgx
+  model: kecg
+  seed: 2026
+  device: cuda:1
+data:
+  csv_dir: Data/pgxlod_csv
+  cache_dir: Data/cache
+  regime: broadMatch/pgx
+model:
+  embed_dim: 256
+  n_layers: 2
+  n_heads: 2
+  attn_dropout: 0.0
+  normalize_embeddings: false
+  instance_normalization: false
+train:
+  epochs: 1000
+  lr: 0.005
+  optimizer: adagrad
+  weight_decay: 0.0
+  grad_clip: 0.0
+  early_stop_patience: 12
+  margin_cg: 3.0
+  margin_ke: 3.0
+  k_cg: 25
+  k_ke: 2
+  use_nns: true
+  update_num: 5
+  ke_batch_size: 100000
+eval:
+  every: 25
+  hits_at:
+  - 1
+  - 5
+  - 10
+  metric: csls
+  csls_k: 3
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots:
+    loss_curve: loss_curve.png
+    ranking_metrics: ranking_metrics.png
+  log_level: INFO
+_project_root: .
+_config_path: configs/kecg_broadmatch.yaml
+_run_dir: experiments/kecg_broadMatch-pgx_20260929-051457

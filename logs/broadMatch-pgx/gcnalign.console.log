@@ -1,0 +1,102 @@
+05:14:58 | INFO    | Model: gcnalign | seed 2026 | device: cuda:0
+05:14:59 | INFO    | Regime broadMatch/pgx | graph: 84,182 nodes, 131,238 triples, 50,435 UCPGx candidates
+05:14:59 | INFO    |   broadMatch/pgx   train=  3,744 test=  8,599 (70%) queries= 6,866 by cluster    leakage=0.00%
+05:14:59 | INFO    |   closeMatch       train=  2,738 test=  6,296 (70%) queries= 1,490 by cluster    leakage=0.00%
+05:14:59 | INFO    |   sameAs           train= 19,942 test= 46,531 (70%) queries=10,883 by cluster    leakage=0.00%
+05:14:59 | INFO    |   broadMatch/onco  train= 25,039 test= 47,737 (66%) queries= 2,032 intra-cluster leakage=0.00%
+05:14:59 | INFO    |   relatedMatch     train=  2,801 test=  6,289 (69%) queries=   812 intra-cluster leakage=0.00%
+05:14:59 | INFO    |   related          train=471,647 test=762,046 (62%) queries=16,977 intra-cluster leakage=0.00%
+05:14:59 | INFO    | Data: {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2805, 'val_pairs': 939, 'candidates': 50435, 'unlabeled_pool': 47014}
+code/src/data.py:99: UserWarning: 'where' used without 'out', expect uninitialized memory in output. If this is intentional, use out=None.
+  inv_sqrt = np.power(deg, -0.5, where=deg > 0)
+code/src/data.py:101: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/Context.cpp:848.)
+  return torch.sparse_coo_tensor(
+05:15:00 | INFO    | Params: 25.34M
+05:15:00 | INFO    | Run directory: experiments/gcnalign_broadMatch-pgx_20260929-051457
+05:15:00 | INFO    | GCN-Align | device=cuda:0 | {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2805, 'val_pairs': 939, 'candidates': 50435, 'unlabeled_pool': 47014} 
+
+GCN-Align:   0%|                                                            | 0/600 [00:00<?, ?it/s]
+GCN-Align:   0%|                                                    | 1/600 [00:00<02:36,  3.83it/s]05:15:01 | INFO    | epoch    5/600 | loss=0.0007
+05:15:01 | INFO    |            [filtered] MRR=0.4036 Hit@1=0.1491 Hit@5=0.7284 Hit@10=0.7636 MR=4567.8 n=939
+05:15:01 | INFO    |            [multiref] MRR=0.4147 Hit@1=0.1081 Hit@5=0.8131 Hit@10=0.8438 MR=2368.8 n=749
+05:15:01 | INFO    |            -> new best filtered MRR=0.4036 (saved model_best.pt)
+
+GCN-Align:   1%|▍                                                   | 5/600 [00:01<01:58,  5.04it/s]05:15:01 | INFO    | epoch   10/600 | loss=0.0006
+05:15:02 | INFO    |            [filtered] MRR=0.4047 Hit@1=0.1480 Hit@5=0.7370 Hit@10=0.7657 MR=4208.4 n=939
+05:15:02 | INFO    |            [multiref] MRR=0.4147 Hit@1=0.1055 Hit@5=0.8224 Hit@10=0.8438 MR=2150.6 n=749
+05:15:02 | INFO    |            -> new best filtered MRR=0.4047 (saved model_best.pt)
+
+GCN-Align:   2%|▊                                                  | 10/600 [00:01<01:20,  7.34it/s]05:15:02 | INFO    | epoch   15/600 | loss=0.0005
+05:15:02 | INFO    |            [filtered] MRR=0.4006 Hit@1=0.1438 Hit@5=0.7380 Hit@10=0.7678 MR=4039.6 n=939
+05:15:02 | INFO    |            [multiref] MRR=0.4111 Hit@1=0.1028 Hit@5=0.8224 Hit@10=0.8451 MR=2041.9 n=749
+
+GCN-Align:   2%|█▎                                                 | 15/600 [00:01<00:57, 10.18it/s]05:15:02 | INFO    | epoch   20/600 | loss=0.0005
+05:15:02 | INFO    |            [filtered] MRR=0.3999 Hit@1=0.1448 Hit@5=0.7295 Hit@10=0.7625 MR=3946.1 n=939
+05:15:02 | INFO    |            [multiref] MRR=0.4108 Hit@1=0.1041 Hit@5=0.8171 Hit@10=0.8398 MR=1978.8 n=749
+
+GCN-Align:   3%|█▋                                                 | 20/600 [00:02<00:47, 12.31it/s]
+GCN-Align:   4%|██                                                 | 24/600 [00:02<00:36, 15.66it/s]05:15:03 | INFO    | epoch   25/600 | loss=0.0005
+05:15:03 | INFO    |            [filtered] MRR=0.3980 Hit@1=0.1438 Hit@5=0.7274 Hit@10=0.7668 MR=3886.7 n=939
+05:15:03 | INFO    |            [multiref] MRR=0.4094 Hit@1=0.1028 Hit@5=0.8144 Hit@10=0.8451 MR=1942.1 n=749
+
+GCN-Align:   4%|██▎                                                | 27/600 [00:02<00:39, 14.37it/s]05:15:03 | INFO    | epoch   30/600 | loss=0.0004
+05:15:03 | INFO    |            [filtered] MRR=0.3985 Hit@1=0.1438 Hit@5=0.7252 Hit@10=0.7646 MR=3853.5 n=939
+05:15:03 | INFO    |            [multiref] MRR=0.4099 Hit@1=0.1028 Hit@5=0.8091 Hit@10=0.8451 MR=1921.9 n=749
+
+GCN-Align:   5%|██▌                                                | 30/600 [00:02<00:41, 13.58it/s]05:15:03 | INFO    | epoch   35/600 | loss=0.0004
+05:15:03 | INFO    |            [filtered] MRR=0.3989 Hit@1=0.1438 Hit@5=0.7274 Hit@10=0.7668 MR=3854.0 n=939
+05:15:03 | INFO    |            [multiref] MRR=0.4102 Hit@1=0.1028 Hit@5=0.8117 Hit@10=0.8478 MR=1921.0 n=749
+
+GCN-Align:   6%|██▉                                                | 35/600 [00:02<00:37, 14.99it/s]05:15:03 | INFO    | epoch   40/600 | loss=0.0004
+05:15:03 | INFO    |            [filtered] MRR=0.3979 Hit@1=0.1438 Hit@5=0.7263 Hit@10=0.7636 MR=3921.5 n=939
+05:15:03 | INFO    |            [multiref] MRR=0.4090 Hit@1=0.1028 Hit@5=0.8104 Hit@10=0.8438 MR=1976.3 n=749
+
+GCN-Align:   7%|███▍                                               | 40/600 [00:03<00:35, 15.96it/s]05:15:04 | INFO    | epoch   45/600 | loss=0.0004
+05:15:04 | INFO    |            [filtered] MRR=0.3985 Hit@1=0.1438 Hit@5=0.7263 Hit@10=0.7646 MR=4037.7 n=939
+05:15:04 | INFO    |            [multiref] MRR=0.4098 Hit@1=0.1028 Hit@5=0.8104 Hit@10=0.8451 MR=2087.5 n=749
+
+GCN-Align:   8%|███▊                                               | 45/600 [00:03<00:33, 16.65it/s]05:15:04 | INFO    | epoch   50/600 | loss=0.0004
+05:15:04 | INFO    |            [filtered] MRR=0.3988 Hit@1=0.1438 Hit@5=0.7274 Hit@10=0.7646 MR=4106.4 n=939
+05:15:04 | INFO    |            [multiref] MRR=0.4101 Hit@1=0.1028 Hit@5=0.8117 Hit@10=0.8438 MR=2150.9 n=749
+
+GCN-Align:   8%|████▎                                              | 50/600 [00:03<00:32, 17.16it/s]05:15:04 | INFO    | epoch   55/600 | loss=0.0004
+05:15:04 | INFO    |            [filtered] MRR=0.3983 Hit@1=0.1438 Hit@5=0.7274 Hit@10=0.7646 MR=4128.1 n=939
+05:15:04 | INFO    |            [multiref] MRR=0.4097 Hit@1=0.1028 Hit@5=0.8117 Hit@10=0.8438 MR=2175.3 n=749
+
+GCN-Align:   9%|████▋                                              | 55/600 [00:04<00:30, 17.62it/s]05:15:04 | INFO    | epoch   60/600 | loss=0.0003
+05:15:05 | INFO    |            [filtered] MRR=0.3976 Hit@1=0.1438 Hit@5=0.7263 Hit@10=0.7646 MR=4115.6 n=939
+05:15:05 | INFO    |            [multiref] MRR=0.4089 Hit@1=0.1028 Hit@5=0.8104 Hit@10=0.8438 MR=2167.8 n=749
+
+GCN-Align:  10%|█████                                              | 60/600 [00:04<00:30, 17.87it/s]05:15:05 | INFO    | epoch   65/600 | loss=0.0004
+05:15:05 | INFO    |            [filtered] MRR=0.3976 Hit@1=0.1438 Hit@5=0.7252 Hit@10=0.7646 MR=4102.5 n=939
+05:15:05 | INFO    |            [multiref] MRR=0.4088 Hit@1=0.1028 Hit@5=0.8091 Hit@10=0.8438 MR=2156.1 n=749
+
+GCN-Align:  11%|█████▌                                             | 65/600 [00:04<00:29, 17.95it/s]05:15:05 | INFO    | epoch   70/600 | loss=0.0002
+05:15:05 | INFO    |            [filtered] MRR=0.3976 Hit@1=0.1438 Hit@5=0.7252 Hit@10=0.7646 MR=4082.6 n=939
+05:15:05 | INFO    |            [multiref] MRR=0.4088 Hit@1=0.1028 Hit@5=0.8091 Hit@10=0.8438 MR=2137.2 n=749
+
+GCN-Align:  12%|█████▉                                             | 70/600 [00:04<00:29, 18.03it/s]05:15:05 | INFO    | epoch   75/600 | loss=0.0006
+05:15:05 | INFO    |            [filtered] MRR=0.3977 Hit@1=0.1438 Hit@5=0.7242 Hit@10=0.7646 MR=4070.9 n=939
+05:15:05 | INFO    |            [multiref] MRR=0.4089 Hit@1=0.1028 Hit@5=0.8077 Hit@10=0.8438 MR=2125.8 n=749
+
+GCN-Align:  12%|██████▍                                            | 75/600 [00:05<00:29, 18.06it/s]05:15:06 | INFO    | epoch   80/600 | loss=0.0002
+05:15:06 | INFO    |            [filtered] MRR=0.3978 Hit@1=0.1438 Hit@5=0.7263 Hit@10=0.7646 MR=4062.0 n=939
+05:15:06 | INFO    |            [multiref] MRR=0.4090 Hit@1=0.1028 Hit@5=0.8104 Hit@10=0.8438 MR=2117.5 n=749
+
+GCN-Align:  13%|██████▊                                            | 80/600 [00:05<00:28, 17.94it/s]05:15:06 | INFO    | epoch   85/600 | loss=0.0003
+05:15:06 | INFO    |            [filtered] MRR=0.3980 Hit@1=0.1448 Hit@5=0.7252 Hit@10=0.7625 MR=4055.0 n=939
+05:15:06 | INFO    |            [multiref] MRR=0.4093 Hit@1=0.1041 Hit@5=0.8091 Hit@10=0.8411 MR=2111.7 n=749
+
+GCN-Align:  14%|███████▏                                           | 85/600 [00:05<00:28, 18.12it/s]05:15:06 | INFO    | epoch   90/600 | loss=0.0004
+05:15:06 | INFO    |            [filtered] MRR=0.3983 Hit@1=0.1448 Hit@5=0.7284 Hit@10=0.7625 MR=4057.1 n=939
+05:15:06 | INFO    |            [multiref] MRR=0.4097 Hit@1=0.1041 Hit@5=0.8131 Hit@10=0.8425 MR=2116.0 n=749
+05:15:06 | INFO    |            early stop (best=0.4047 @ 10).
+
+GCN-Align:  15%|███████▌                                           | 89/600 [00:05<00:34, 14.98it/s]
+05:15:07 | INFO    | Done in 0.1 min. Best filtered MRR=0.4047 @ epoch 10.
+05:15:07 | INFO    | Final evaluation on the test split, read once
+05:15:07 | INFO    |   [cosine] filtMRR=0.4605 H@1=0.1929 H@10=0.8518 n=3732 | mrefMRR=0.4821 H@1=0.1777
+05:15:08 | INFO    |   [  csls] filtMRR=0.4358 H@1=0.1707 H@10=0.8215 n=3732 | mrefMRR=0.4629 H@1=0.1553
+05:15:11 | INFO    |   [cosine] F1=0.8290 P=0.8871 R=0.7780 (threshold 0.970 from validation, validation F1=0.8014)
+05:15:11 | INFO    | Wrote experiments/gcnalign_broadMatch-pgx_20260929-051457/result.json
+05:15:11 | INFO    | Finished. Best validation MRR=0.4047 @ epoch 10.

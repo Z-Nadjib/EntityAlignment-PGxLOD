@@ -1,0 +1,548 @@
+05:15:57 | INFO    | Model: rrea | seed 2026 | device: cuda:0
+05:15:58 | INFO    | Regime broadMatch/pgx | graph: 84,182 nodes, 131,238 triples, 50,435 UCPGx candidates
+05:15:58 | INFO    |   broadMatch/pgx   train=  3,744 test=  8,599 (70%) queries= 6,866 by cluster    leakage=0.00%
+05:15:58 | INFO    |   closeMatch       train=  2,738 test=  6,296 (70%) queries= 1,490 by cluster    leakage=0.00%
+05:15:58 | INFO    |   sameAs           train= 19,942 test= 46,531 (70%) queries=10,883 by cluster    leakage=0.00%
+05:15:58 | INFO    |   broadMatch/onco  train= 25,039 test= 47,737 (66%) queries= 2,032 intra-cluster leakage=0.00%
+05:15:58 | INFO    |   relatedMatch     train=  2,801 test=  6,289 (69%) queries=   812 intra-cluster leakage=0.00%
+05:15:58 | INFO    |   related          train=471,647 test=762,046 (62%) queries=16,977 intra-cluster leakage=0.00%
+05:15:58 | INFO    | Data: {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2805, 'val_pairs': 939, 'candidates': 50435, 'unlabeled_pool': 47014}
+05:16:01 | INFO    | Params: 8.42M
+05:16:01 | INFO    | Run directory: experiments/rrea_broadMatch-pgx_20260929-051557
+05:16:01 | INFO    | RREA | device=cuda:0 | {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2805, 'val_pairs': 939, 'candidates': 50435, 'unlabeled_pool': 47014} turns=8 x 200
+05:16:02 | INFO    | epoch   10/1600 | loss=0.1445
+05:16:02 | INFO    |            [filtered] MRR=0.0684 Hit@1=0.0532 Hit@5=0.0682 Hit@10=0.0852 MR=2957.6 n=939
+05:16:02 | INFO    |            [multiref] MRR=0.0559 Hit@1=0.0387 Hit@5=0.0561 Hit@10=0.0774 MR=1551.0 n=749
+05:16:02 | INFO    |            -> new best filtered MRR=0.0684 (saved model_best.pt)
+05:16:03 | INFO    | epoch   20/1600 | loss=0.0421
+05:16:03 | INFO    |            [filtered] MRR=0.1120 Hit@1=0.0639 Hit@5=0.1150 Hit@10=0.1981 MR=1922.7 n=939
+05:16:03 | INFO    |            [multiref] MRR=0.1051 Hit@1=0.0507 Hit@5=0.1108 Hit@10=0.2029 MR=925.3 n=749
+05:16:03 | INFO    |            -> new best filtered MRR=0.1120 (saved model_best.pt)
+05:16:03 | INFO    | epoch   30/1600 | loss=0.0240
+05:16:04 | INFO    |            [filtered] MRR=0.1421 Hit@1=0.0809 Hit@5=0.1629 Hit@10=0.2897 MR=1301.2 n=939
+05:16:04 | INFO    |            [multiref] MRR=0.1409 Hit@1=0.0721 Hit@5=0.1682 Hit@10=0.3017 MR=652.3 n=749
+05:16:04 | INFO    |            -> new best filtered MRR=0.1421 (saved model_best.pt)
+05:16:04 | INFO    | epoch   40/1600 | loss=0.0107
+05:16:04 | INFO    |            [filtered] MRR=0.1650 Hit@1=0.0958 Hit@5=0.2002 Hit@10=0.3333 MR=1013.0 n=939
+05:16:04 | INFO    |            [multiref] MRR=0.1660 Hit@1=0.0881 Hit@5=0.2083 Hit@10=0.3498 MR=519.4 n=749
+05:16:05 | INFO    |            -> new best filtered MRR=0.1650 (saved model_best.pt)
+05:16:05 | INFO    | epoch   50/1600 | loss=0.0047
+05:16:05 | INFO    |            [filtered] MRR=0.1909 Hit@1=0.1140 Hit@5=0.2492 Hit@10=0.3791 MR=607.2 n=939
+05:16:05 | INFO    |            [multiref] MRR=0.1946 Hit@1=0.1081 Hit@5=0.2617 Hit@10=0.3979 MR=399.5 n=749
+05:16:06 | INFO    |            -> new best filtered MRR=0.1909 (saved model_best.pt)
+05:16:06 | INFO    | epoch   60/1600 | loss=0.0031
+05:16:06 | INFO    |            [filtered] MRR=0.2072 Hit@1=0.1182 Hit@5=0.2726 Hit@10=0.4153 MR=560.0 n=939
+05:16:06 | INFO    |            [multiref] MRR=0.2123 Hit@1=0.1135 Hit@5=0.2790 Hit@10=0.4433 MR=395.5 n=749
+05:16:06 | INFO    |            -> new best filtered MRR=0.2072 (saved model_best.pt)
+05:16:07 | INFO    | epoch   70/1600 | loss=0.0033
+05:16:07 | INFO    |            [filtered] MRR=0.2302 Hit@1=0.1353 Hit@5=0.3142 Hit@10=0.4515 MR=536.3 n=939
+05:16:07 | INFO    |            [multiref] MRR=0.2341 Hit@1=0.1282 Hit@5=0.3298 Hit@10=0.4793 MR=389.2 n=749
+05:16:07 | INFO    |            -> new best filtered MRR=0.2302 (saved model_best.pt)
+05:16:08 | INFO    | epoch   80/1600 | loss=0.0040
+05:16:08 | INFO    |            [filtered] MRR=0.2541 Hit@1=0.1480 Hit@5=0.3557 Hit@10=0.4771 MR=443.7 n=939
+05:16:08 | INFO    |            [multiref] MRR=0.2595 Hit@1=0.1429 Hit@5=0.3645 Hit@10=0.5047 MR=327.2 n=749
+05:16:08 | INFO    |            -> new best filtered MRR=0.2541 (saved model_best.pt)
+05:16:08 | INFO    | epoch   90/1600 | loss=0.0056
+05:16:08 | INFO    |            [filtered] MRR=0.2536 Hit@1=0.1459 Hit@5=0.3600 Hit@10=0.4888 MR=382.9 n=939
+05:16:08 | INFO    |            [multiref] MRR=0.2519 Hit@1=0.1335 Hit@5=0.3605 Hit@10=0.5234 MR=277.8 n=749
+05:16:09 | INFO    | epoch  100/1600 | loss=0.0022
+05:16:09 | INFO    |            [filtered] MRR=0.2460 Hit@1=0.1374 Hit@5=0.3376 Hit@10=0.4696 MR=357.8 n=939
+05:16:09 | INFO    |            [multiref] MRR=0.2474 Hit@1=0.1308 Hit@5=0.3458 Hit@10=0.4967 MR=256.4 n=749
+05:16:10 | INFO    | epoch  110/1600 | loss=0.0041
+05:16:10 | INFO    |            [filtered] MRR=0.2498 Hit@1=0.1310 Hit@5=0.3632 Hit@10=0.4984 MR=354.3 n=939
+05:16:10 | INFO    |            [multiref] MRR=0.2442 Hit@1=0.1135 Hit@5=0.3685 Hit@10=0.5194 MR=260.9 n=749
+05:16:10 | INFO    | epoch  120/1600 | loss=0.0018
+05:16:11 | INFO    |            [filtered] MRR=0.2708 Hit@1=0.1640 Hit@5=0.3717 Hit@10=0.5037 MR=329.2 n=939
+05:16:11 | INFO    |            [multiref] MRR=0.2683 Hit@1=0.1509 Hit@5=0.3832 Hit@10=0.5327 MR=240.7 n=749
+05:16:11 | INFO    |            -> new best filtered MRR=0.2708 (saved model_best.pt)
+05:16:11 | INFO    | epoch  130/1600 | loss=0.0015
+05:16:11 | INFO    |            [filtered] MRR=0.2758 Hit@1=0.1693 Hit@5=0.3845 Hit@10=0.4963 MR=319.4 n=939
+05:16:11 | INFO    |            [multiref] MRR=0.2812 Hit@1=0.1656 Hit@5=0.4059 Hit@10=0.5154 MR=233.6 n=749
+05:16:12 | INFO    |            -> new best filtered MRR=0.2758 (saved model_best.pt)
+05:16:12 | INFO    | epoch  140/1600 | loss=0.0037
+05:16:12 | INFO    |            [filtered] MRR=0.2765 Hit@1=0.1619 Hit@5=0.3813 Hit@10=0.5122 MR=328.3 n=939
+05:16:12 | INFO    |            [multiref] MRR=0.2710 Hit@1=0.1455 Hit@5=0.3858 Hit@10=0.5381 MR=243.9 n=749
+05:16:12 | INFO    |            -> new best filtered MRR=0.2765 (saved model_best.pt)
+05:16:13 | INFO    | epoch  150/1600 | loss=0.0021
+05:16:13 | INFO    |            [filtered] MRR=0.2811 Hit@1=0.1725 Hit@5=0.3845 Hit@10=0.5037 MR=320.2 n=939
+05:16:13 | INFO    |            [multiref] MRR=0.2792 Hit@1=0.1589 Hit@5=0.3939 Hit@10=0.5274 MR=240.9 n=749
+05:16:13 | INFO    |            -> new best filtered MRR=0.2811 (saved model_best.pt)
+05:16:14 | INFO    | epoch  160/1600 | loss=0.0001
+05:16:14 | INFO    |            [filtered] MRR=0.2703 Hit@1=0.1715 Hit@5=0.3600 Hit@10=0.4792 MR=283.3 n=939
+05:16:14 | INFO    |            [multiref] MRR=0.2722 Hit@1=0.1642 Hit@5=0.3752 Hit@10=0.5033 MR=205.0 n=749
+05:16:14 | INFO    | epoch  170/1600 | loss=0.0062
+05:16:14 | INFO    |            [filtered] MRR=0.2803 Hit@1=0.1906 Hit@5=0.3461 Hit@10=0.4846 MR=300.3 n=939
+05:16:14 | INFO    |            [multiref] MRR=0.2784 Hit@1=0.1802 Hit@5=0.3498 Hit@10=0.5060 MR=215.5 n=749
+05:16:15 | INFO    | epoch  180/1600 | loss=0.0025
+05:16:15 | INFO    |            [filtered] MRR=0.2758 Hit@1=0.1810 Hit@5=0.3642 Hit@10=0.4856 MR=299.0 n=939
+05:16:15 | INFO    |            [multiref] MRR=0.2735 Hit@1=0.1696 Hit@5=0.3685 Hit@10=0.5033 MR=212.8 n=749
+05:16:16 | INFO    | epoch  190/1600 | loss=0.0018
+05:16:16 | INFO    |            [filtered] MRR=0.2800 Hit@1=0.1906 Hit@5=0.3589 Hit@10=0.4771 MR=289.5 n=939
+05:16:16 | INFO    |            [multiref] MRR=0.2809 Hit@1=0.1829 Hit@5=0.3725 Hit@10=0.4980 MR=201.7 n=749
+05:16:16 | INFO    | epoch  200/1600 | loss=0.0079 | bootstrap: +248 mutual pairs (train=3053, pool=501)
+05:16:17 | INFO    |            [filtered] MRR=0.2892 Hit@1=0.1874 Hit@5=0.3759 Hit@10=0.5069 MR=280.0 n=939
+05:16:17 | INFO    |            [multiref] MRR=0.2835 Hit@1=0.1709 Hit@5=0.3818 Hit@10=0.5287 MR=199.6 n=749
+05:16:17 | INFO    |            -> new best filtered MRR=0.2892 (saved model_best.pt)
+05:16:17 | INFO    | epoch  210/1600 | loss=0.0013
+05:16:17 | INFO    |            [filtered] MRR=0.3029 Hit@1=0.2130 Hit@5=0.3727 Hit@10=0.5080 MR=289.7 n=939
+05:16:17 | INFO    |            [multiref] MRR=0.3019 Hit@1=0.2043 Hit@5=0.3765 Hit@10=0.5394 MR=213.8 n=749
+05:16:18 | INFO    |            -> new best filtered MRR=0.3029 (saved model_best.pt)
+05:16:18 | INFO    | epoch  220/1600 | loss=0.0011
+05:16:18 | INFO    |            [filtered] MRR=0.3159 Hit@1=0.2173 Hit@5=0.4036 Hit@10=0.5261 MR=281.5 n=939
+05:16:18 | INFO    |            [multiref] MRR=0.3153 Hit@1=0.2056 Hit@5=0.4166 Hit@10=0.5594 MR=195.3 n=749
+05:16:18 | INFO    |            -> new best filtered MRR=0.3159 (saved model_best.pt)
+05:16:19 | INFO    | epoch  230/1600 | loss=0.0010
+05:16:19 | INFO    |            [filtered] MRR=0.3165 Hit@1=0.2077 Hit@5=0.4239 Hit@10=0.5517 MR=273.2 n=939
+05:16:19 | INFO    |            [multiref] MRR=0.3160 Hit@1=0.1949 Hit@5=0.4393 Hit@10=0.5821 MR=187.2 n=749
+05:16:19 | INFO    |            -> new best filtered MRR=0.3165 (saved model_best.pt)
+05:16:20 | INFO    | epoch  240/1600 | loss=0.0002
+05:16:20 | INFO    |            [filtered] MRR=0.3248 Hit@1=0.2258 Hit@5=0.4185 Hit@10=0.5357 MR=288.6 n=939
+05:16:20 | INFO    |            [multiref] MRR=0.3261 Hit@1=0.2150 Hit@5=0.4312 Hit@10=0.5674 MR=200.4 n=749
+05:16:20 | INFO    |            -> new best filtered MRR=0.3248 (saved model_best.pt)
+05:16:20 | INFO    | epoch  250/1600 | loss=0.0002
+05:16:21 | INFO    |            [filtered] MRR=0.3098 Hit@1=0.2162 Hit@5=0.4047 Hit@10=0.5122 MR=290.7 n=939
+05:16:21 | INFO    |            [multiref] MRR=0.3084 Hit@1=0.2043 Hit@5=0.4139 Hit@10=0.5394 MR=202.3 n=749
+05:16:21 | INFO    | epoch  260/1600 | loss=0.0058
+05:16:21 | INFO    |            [filtered] MRR=0.3030 Hit@1=0.1885 Hit@5=0.4228 Hit@10=0.5410 MR=284.9 n=939
+05:16:21 | INFO    |            [multiref] MRR=0.3033 Hit@1=0.1816 Hit@5=0.4259 Hit@10=0.5728 MR=198.3 n=749
+05:16:22 | INFO    | epoch  270/1600 | loss=0.0002
+05:16:22 | INFO    |            [filtered] MRR=0.3090 Hit@1=0.1853 Hit@5=0.4324 Hit@10=0.5634 MR=273.4 n=939
+05:16:22 | INFO    |            [multiref] MRR=0.3144 Hit@1=0.1816 Hit@5=0.4433 Hit@10=0.5928 MR=188.0 n=749
+05:16:22 | INFO    | epoch  280/1600 | loss=0.0030
+05:16:23 | INFO    |            [filtered] MRR=0.3215 Hit@1=0.2098 Hit@5=0.4324 Hit@10=0.5517 MR=281.0 n=939
+05:16:23 | INFO    |            [multiref] MRR=0.3169 Hit@1=0.2003 Hit@5=0.4299 Hit@10=0.5728 MR=198.6 n=749
+05:16:23 | INFO    | epoch  290/1600 | loss=0.0019
+05:16:23 | INFO    |            [filtered] MRR=0.3243 Hit@1=0.2141 Hit@5=0.4292 Hit@10=0.5580 MR=272.4 n=939
+05:16:23 | INFO    |            [multiref] MRR=0.3234 Hit@1=0.2043 Hit@5=0.4352 Hit@10=0.5888 MR=190.1 n=749
+05:16:24 | INFO    | epoch  300/1600 | loss=0.0021
+05:16:24 | INFO    |            [filtered] MRR=0.3302 Hit@1=0.2162 Hit@5=0.4409 Hit@10=0.5708 MR=285.7 n=939
+05:16:24 | INFO    |            [multiref] MRR=0.3303 Hit@1=0.2069 Hit@5=0.4473 Hit@10=0.5968 MR=198.0 n=749
+05:16:24 | INFO    |            -> new best filtered MRR=0.3302 (saved model_best.pt)
+05:16:25 | INFO    | epoch  310/1600 | loss=0.0001
+05:16:25 | INFO    |            [filtered] MRR=0.3461 Hit@1=0.2428 Hit@5=0.4420 Hit@10=0.5666 MR=287.0 n=939
+05:16:25 | INFO    |            [multiref] MRR=0.3513 Hit@1=0.2390 Hit@5=0.4539 Hit@10=0.5968 MR=200.7 n=749
+05:16:25 | INFO    |            -> new best filtered MRR=0.3461 (saved model_best.pt)
+05:16:26 | INFO    | epoch  320/1600 | loss=0.0002
+05:16:26 | INFO    |            [filtered] MRR=0.3426 Hit@1=0.2311 Hit@5=0.4579 Hit@10=0.5825 MR=286.6 n=939
+05:16:26 | INFO    |            [multiref] MRR=0.3438 Hit@1=0.2216 Hit@5=0.4700 Hit@10=0.6142 MR=197.9 n=749
+05:16:26 | INFO    | epoch  330/1600 | loss=0.0011
+05:16:26 | INFO    |            [filtered] MRR=0.3531 Hit@1=0.2428 Hit@5=0.4643 Hit@10=0.5836 MR=283.6 n=939
+05:16:26 | INFO    |            [multiref] MRR=0.3570 Hit@1=0.2363 Hit@5=0.4780 Hit@10=0.6182 MR=199.9 n=749
+05:16:27 | INFO    |            -> new best filtered MRR=0.3531 (saved model_best.pt)
+05:16:27 | INFO    | epoch  340/1600 | loss=0.0009
+05:16:27 | INFO    |            [filtered] MRR=0.3566 Hit@1=0.2524 Hit@5=0.4643 Hit@10=0.5974 MR=286.7 n=939
+05:16:27 | INFO    |            [multiref] MRR=0.3540 Hit@1=0.2417 Hit@5=0.4686 Hit@10=0.6248 MR=201.6 n=749
+05:16:27 | INFO    |            -> new best filtered MRR=0.3566 (saved model_best.pt)
+05:16:28 | INFO    | epoch  350/1600 | loss=0.0000
+05:16:28 | INFO    |            [filtered] MRR=0.3535 Hit@1=0.2428 Hit@5=0.4611 Hit@10=0.5889 MR=292.5 n=939
+05:16:28 | INFO    |            [multiref] MRR=0.3570 Hit@1=0.2363 Hit@5=0.4740 Hit@10=0.6235 MR=207.2 n=749
+05:16:29 | INFO    | epoch  360/1600 | loss=0.0010
+05:16:29 | INFO    |            [filtered] MRR=0.3673 Hit@1=0.2630 Hit@5=0.4686 Hit@10=0.5868 MR=290.5 n=939
+05:16:29 | INFO    |            [multiref] MRR=0.3746 Hit@1=0.2617 Hit@5=0.4846 Hit@10=0.6208 MR=203.3 n=749
+05:16:29 | INFO    |            -> new best filtered MRR=0.3673 (saved model_best.pt)
+05:16:29 | INFO    | epoch  370/1600 | loss=0.0023
+05:16:29 | INFO    |            [filtered] MRR=0.3549 Hit@1=0.2396 Hit@5=0.4718 Hit@10=0.5879 MR=283.4 n=939
+05:16:29 | INFO    |            [multiref] MRR=0.3557 Hit@1=0.2296 Hit@5=0.4820 Hit@10=0.6222 MR=195.7 n=749
+05:16:30 | INFO    | epoch  380/1600 | loss=0.0023
+05:16:30 | INFO    |            [filtered] MRR=0.3576 Hit@1=0.2311 Hit@5=0.4984 Hit@10=0.6198 MR=283.7 n=939
+05:16:30 | INFO    |            [multiref] MRR=0.3580 Hit@1=0.2176 Hit@5=0.5100 Hit@10=0.6555 MR=192.6 n=749
+05:16:31 | INFO    | epoch  390/1600 | loss=0.0007
+05:16:31 | INFO    |            [filtered] MRR=0.3617 Hit@1=0.2524 Hit@5=0.4878 Hit@10=0.5974 MR=291.7 n=939
+05:16:31 | INFO    |            [multiref] MRR=0.3625 Hit@1=0.2430 Hit@5=0.5007 Hit@10=0.6315 MR=204.6 n=749
+05:16:31 | INFO    | epoch  400/1600 | loss=0.0001 | bootstrap: +23 mutual pairs (train=3076, pool=478)
+05:16:32 | INFO    |            [filtered] MRR=0.3587 Hit@1=0.2311 Hit@5=0.5080 Hit@10=0.6187 MR=298.8 n=939
+05:16:32 | INFO    |            [multiref] MRR=0.3612 Hit@1=0.2203 Hit@5=0.5234 Hit@10=0.6595 MR=210.9 n=749
+05:16:32 | INFO    | epoch  410/1600 | loss=0.0022
+05:16:32 | INFO    |            [filtered] MRR=0.3769 Hit@1=0.2726 Hit@5=0.4739 Hit@10=0.5942 MR=302.4 n=939
+05:16:32 | INFO    |            [multiref] MRR=0.3887 Hit@1=0.2750 Hit@5=0.4900 Hit@10=0.6262 MR=214.0 n=749
+05:16:32 | INFO    |            -> new best filtered MRR=0.3769 (saved model_best.pt)
+05:16:33 | INFO    | epoch  420/1600 | loss=0.0008
+05:16:33 | INFO    |            [filtered] MRR=0.3825 Hit@1=0.2620 Hit@5=0.5144 Hit@10=0.6177 MR=296.8 n=939
+05:16:33 | INFO    |            [multiref] MRR=0.3882 Hit@1=0.2577 Hit@5=0.5247 Hit@10=0.6502 MR=208.2 n=749
+05:16:33 | INFO    |            -> new best filtered MRR=0.3825 (saved model_best.pt)
+05:16:34 | INFO    | epoch  430/1600 | loss=0.0019
+05:16:34 | INFO    |            [filtered] MRR=0.3704 Hit@1=0.2460 Hit@5=0.5005 Hit@10=0.6134 MR=292.7 n=939
+05:16:34 | INFO    |            [multiref] MRR=0.3705 Hit@1=0.2336 Hit@5=0.5060 Hit@10=0.6435 MR=203.2 n=749
+05:16:35 | INFO    | epoch  440/1600 | loss=0.0021
+05:16:35 | INFO    |            [filtered] MRR=0.3871 Hit@1=0.2748 Hit@5=0.5005 Hit@10=0.6177 MR=297.1 n=939
+05:16:35 | INFO    |            [multiref] MRR=0.3956 Hit@1=0.2737 Hit@5=0.5127 Hit@10=0.6475 MR=203.2 n=749
+05:16:35 | INFO    |            -> new best filtered MRR=0.3871 (saved model_best.pt)
+05:16:35 | INFO    | epoch  450/1600 | loss=0.0005
+05:16:35 | INFO    |            [filtered] MRR=0.3874 Hit@1=0.2641 Hit@5=0.5229 Hit@10=0.6294 MR=299.2 n=939
+05:16:35 | INFO    |            [multiref] MRR=0.3892 Hit@1=0.2537 Hit@5=0.5381 Hit@10=0.6569 MR=195.7 n=749
+05:16:36 | INFO    |            -> new best filtered MRR=0.3874 (saved model_best.pt)
+05:16:36 | INFO    | epoch  460/1600 | loss=0.0044
+05:16:36 | INFO    |            [filtered] MRR=0.4042 Hit@1=0.2907 Hit@5=0.5229 Hit@10=0.6294 MR=291.1 n=939
+05:16:36 | INFO    |            [multiref] MRR=0.4108 Hit@1=0.2884 Hit@5=0.5314 Hit@10=0.6555 MR=191.5 n=749
+05:16:37 | INFO    |            -> new best filtered MRR=0.4042 (saved model_best.pt)
+05:16:37 | INFO    | epoch  470/1600 | loss=0.0029
+05:16:37 | INFO    |            [filtered] MRR=0.4008 Hit@1=0.2812 Hit@5=0.5367 Hit@10=0.6358 MR=298.6 n=939
+05:16:37 | INFO    |            [multiref] MRR=0.4055 Hit@1=0.2764 Hit@5=0.5501 Hit@10=0.6636 MR=202.8 n=749
+05:16:38 | INFO    | epoch  480/1600 | loss=0.0020
+05:16:38 | INFO    |            [filtered] MRR=0.3996 Hit@1=0.2897 Hit@5=0.5165 Hit@10=0.6219 MR=293.4 n=939
+05:16:38 | INFO    |            [multiref] MRR=0.4035 Hit@1=0.2830 Hit@5=0.5287 Hit@10=0.6515 MR=197.3 n=749
+05:16:38 | INFO    | epoch  490/1600 | loss=0.0037
+05:16:39 | INFO    |            [filtered] MRR=0.4058 Hit@1=0.3099 Hit@5=0.5080 Hit@10=0.5953 MR=301.0 n=939
+05:16:39 | INFO    |            [multiref] MRR=0.4141 Hit@1=0.3111 Hit@5=0.5220 Hit@10=0.6222 MR=202.9 n=749
+05:16:39 | INFO    |            -> new best filtered MRR=0.4058 (saved model_best.pt)
+05:16:39 | INFO    | epoch  500/1600 | loss=0.0017
+05:16:39 | INFO    |            [filtered] MRR=0.4106 Hit@1=0.3099 Hit@5=0.5144 Hit@10=0.6113 MR=304.2 n=939
+05:16:39 | INFO    |            [multiref] MRR=0.4193 Hit@1=0.3111 Hit@5=0.5274 Hit@10=0.6409 MR=204.1 n=749
+05:16:40 | INFO    |            -> new best filtered MRR=0.4106 (saved model_best.pt)
+05:16:40 | INFO    | epoch  510/1600 | loss=0.0009
+05:16:40 | INFO    |            [filtered] MRR=0.4122 Hit@1=0.3131 Hit@5=0.5144 Hit@10=0.6028 MR=308.3 n=939
+05:16:40 | INFO    |            [multiref] MRR=0.4271 Hit@1=0.3231 Hit@5=0.5287 Hit@10=0.6302 MR=211.9 n=749
+05:16:40 | INFO    |            -> new best filtered MRR=0.4122 (saved model_best.pt)
+05:16:41 | INFO    | epoch  520/1600 | loss=0.0000
+05:16:41 | INFO    |            [filtered] MRR=0.4114 Hit@1=0.3110 Hit@5=0.5165 Hit@10=0.6006 MR=312.9 n=939
+05:16:41 | INFO    |            [multiref] MRR=0.4263 Hit@1=0.3204 Hit@5=0.5340 Hit@10=0.6275 MR=215.2 n=749
+05:16:41 | INFO    | epoch  530/1600 | loss=0.0000
+05:16:42 | INFO    |            [filtered] MRR=0.4101 Hit@1=0.3078 Hit@5=0.5122 Hit@10=0.6198 MR=309.7 n=939
+05:16:42 | INFO    |            [multiref] MRR=0.4260 Hit@1=0.3164 Hit@5=0.5300 Hit@10=0.6515 MR=209.9 n=749
+05:16:42 | INFO    | epoch  540/1600 | loss=0.0013
+05:16:42 | INFO    |            [filtered] MRR=0.4192 Hit@1=0.3237 Hit@5=0.5165 Hit@10=0.6081 MR=312.6 n=939
+05:16:42 | INFO    |            [multiref] MRR=0.4382 Hit@1=0.3378 Hit@5=0.5367 Hit@10=0.6395 MR=215.1 n=749
+05:16:43 | INFO    |            -> new best filtered MRR=0.4192 (saved model_best.pt)
+05:16:43 | INFO    | epoch  550/1600 | loss=0.0002
+05:16:43 | INFO    |            [filtered] MRR=0.4131 Hit@1=0.3099 Hit@5=0.5176 Hit@10=0.6092 MR=308.6 n=939
+05:16:43 | INFO    |            [multiref] MRR=0.4273 Hit@1=0.3164 Hit@5=0.5354 Hit@10=0.6395 MR=212.1 n=749
+05:16:44 | INFO    | epoch  560/1600 | loss=0.0015
+05:16:44 | INFO    |            [filtered] MRR=0.4110 Hit@1=0.3110 Hit@5=0.5176 Hit@10=0.6124 MR=298.0 n=939
+05:16:44 | INFO    |            [multiref] MRR=0.4228 Hit@1=0.3138 Hit@5=0.5354 Hit@10=0.6449 MR=203.5 n=749
+05:16:44 | INFO    | epoch  570/1600 | loss=0.0019
+05:16:44 | INFO    |            [filtered] MRR=0.4124 Hit@1=0.2950 Hit@5=0.5410 Hit@10=0.6496 MR=294.9 n=939
+05:16:44 | INFO    |            [multiref] MRR=0.4202 Hit@1=0.2924 Hit@5=0.5554 Hit@10=0.6809 MR=195.1 n=749
+05:16:45 | INFO    | epoch  580/1600 | loss=0.0003
+05:16:45 | INFO    |            [filtered] MRR=0.4038 Hit@1=0.2886 Hit@5=0.5304 Hit@10=0.6400 MR=293.1 n=939
+05:16:45 | INFO    |            [multiref] MRR=0.4140 Hit@1=0.2897 Hit@5=0.5501 Hit@10=0.6756 MR=194.4 n=749
+05:16:46 | INFO    | epoch  590/1600 | loss=0.0001
+05:16:46 | INFO    |            [filtered] MRR=0.4034 Hit@1=0.2929 Hit@5=0.5154 Hit@10=0.6283 MR=288.9 n=939
+05:16:46 | INFO    |            [multiref] MRR=0.4128 Hit@1=0.2937 Hit@5=0.5327 Hit@10=0.6636 MR=188.2 n=749
+05:16:46 | INFO    | epoch  600/1600 | loss=0.0038 | bootstrap: +8 mutual pairs (train=3084, pool=470)
+05:16:46 | INFO    |            [filtered] MRR=0.4095 Hit@1=0.3014 Hit@5=0.5304 Hit@10=0.6294 MR=292.2 n=939
+05:16:46 | INFO    |            [multiref] MRR=0.4199 Hit@1=0.3031 Hit@5=0.5514 Hit@10=0.6622 MR=195.2 n=749
+05:16:47 | INFO    | epoch  610/1600 | loss=0.0038
+05:16:47 | INFO    |            [filtered] MRR=0.4104 Hit@1=0.2897 Hit@5=0.5463 Hit@10=0.6443 MR=302.1 n=939
+05:16:47 | INFO    |            [multiref] MRR=0.4199 Hit@1=0.2884 Hit@5=0.5648 Hit@10=0.6836 MR=202.4 n=749
+05:16:48 | INFO    | epoch  620/1600 | loss=0.0010
+05:16:48 | INFO    |            [filtered] MRR=0.4138 Hit@1=0.2982 Hit@5=0.5389 Hit@10=0.6443 MR=302.0 n=939
+05:16:48 | INFO    |            [multiref] MRR=0.4245 Hit@1=0.3004 Hit@5=0.5554 Hit@10=0.6836 MR=202.0 n=749
+05:16:48 | INFO    | epoch  630/1600 | loss=0.0010
+05:16:49 | INFO    |            [filtered] MRR=0.4177 Hit@1=0.2961 Hit@5=0.5644 Hit@10=0.6635 MR=305.4 n=939
+05:16:49 | INFO    |            [multiref] MRR=0.4314 Hit@1=0.3017 Hit@5=0.5861 Hit@10=0.7036 MR=205.0 n=749
+05:16:49 | INFO    | epoch  640/1600 | loss=0.0012
+05:16:49 | INFO    |            [filtered] MRR=0.4247 Hit@1=0.3174 Hit@5=0.5442 Hit@10=0.6486 MR=311.9 n=939
+05:16:49 | INFO    |            [multiref] MRR=0.4396 Hit@1=0.3244 Hit@5=0.5674 Hit@10=0.6836 MR=210.5 n=749
+05:16:50 | INFO    |            -> new best filtered MRR=0.4247 (saved model_best.pt)
+05:16:50 | INFO    | epoch  650/1600 | loss=0.0027
+05:16:50 | INFO    |            [filtered] MRR=0.4342 Hit@1=0.3269 Hit@5=0.5527 Hit@10=0.6560 MR=292.0 n=939
+05:16:50 | INFO    |            [multiref] MRR=0.4520 Hit@1=0.3378 Hit@5=0.5754 Hit@10=0.6943 MR=195.0 n=749
+05:16:50 | INFO    |            -> new best filtered MRR=0.4342 (saved model_best.pt)
+05:16:51 | INFO    | epoch  660/1600 | loss=0.0023
+05:16:51 | INFO    |            [filtered] MRR=0.4317 Hit@1=0.3237 Hit@5=0.5453 Hit@10=0.6486 MR=293.7 n=939
+05:16:51 | INFO    |            [multiref] MRR=0.4480 Hit@1=0.3311 Hit@5=0.5688 Hit@10=0.6889 MR=196.1 n=749
+05:16:51 | INFO    | epoch  670/1600 | loss=0.0005
+05:16:52 | INFO    |            [filtered] MRR=0.4256 Hit@1=0.3014 Hit@5=0.5687 Hit@10=0.6752 MR=285.5 n=939
+05:16:52 | INFO    |            [multiref] MRR=0.4373 Hit@1=0.3017 Hit@5=0.5915 Hit@10=0.7183 MR=188.7 n=749
+05:16:52 | INFO    | epoch  680/1600 | loss=0.0024
+05:16:52 | INFO    |            [filtered] MRR=0.4103 Hit@1=0.2662 Hit@5=0.5889 Hit@10=0.6890 MR=286.8 n=939
+05:16:52 | INFO    |            [multiref] MRR=0.4180 Hit@1=0.2590 Hit@5=0.6128 Hit@10=0.7330 MR=189.4 n=749
+05:16:53 | INFO    | epoch  690/1600 | loss=0.0001
+05:16:53 | INFO    |            [filtered] MRR=0.4243 Hit@1=0.2950 Hit@5=0.5857 Hit@10=0.6805 MR=306.4 n=939
+05:16:53 | INFO    |            [multiref] MRR=0.4366 Hit@1=0.2964 Hit@5=0.6088 Hit@10=0.7223 MR=207.3 n=749
+05:16:54 | INFO    | epoch  700/1600 | loss=0.0001
+05:16:54 | INFO    |            [filtered] MRR=0.4201 Hit@1=0.2843 Hit@5=0.5729 Hit@10=0.6965 MR=304.3 n=939
+05:16:54 | INFO    |            [multiref] MRR=0.4307 Hit@1=0.2830 Hit@5=0.5955 Hit@10=0.7397 MR=205.9 n=749
+05:16:54 | INFO    | epoch  710/1600 | loss=0.0049
+05:16:54 | INFO    |            [filtered] MRR=0.4346 Hit@1=0.3099 Hit@5=0.5825 Hit@10=0.6933 MR=304.0 n=939
+05:16:54 | INFO    |            [multiref] MRR=0.4476 Hit@1=0.3124 Hit@5=0.6088 Hit@10=0.7397 MR=205.2 n=749
+05:16:55 | INFO    |            -> new best filtered MRR=0.4346 (saved model_best.pt)
+05:16:55 | INFO    | epoch  720/1600 | loss=0.0006
+05:16:55 | INFO    |            [filtered] MRR=0.4374 Hit@1=0.3110 Hit@5=0.5879 Hit@10=0.6986 MR=306.7 n=939
+05:16:55 | INFO    |            [multiref] MRR=0.4519 Hit@1=0.3151 Hit@5=0.6128 Hit@10=0.7450 MR=206.1 n=749
+05:16:55 | INFO    |            -> new best filtered MRR=0.4374 (saved model_best.pt)
+05:16:56 | INFO    | epoch  730/1600 | loss=0.0007
+05:16:56 | INFO    |            [filtered] MRR=0.4303 Hit@1=0.3056 Hit@5=0.5772 Hit@10=0.6858 MR=304.5 n=939
+05:16:56 | INFO    |            [multiref] MRR=0.4419 Hit@1=0.3057 Hit@5=0.6021 Hit@10=0.7343 MR=203.7 n=749
+05:16:57 | INFO    | epoch  740/1600 | loss=0.0008
+05:16:57 | INFO    |            [filtered] MRR=0.4220 Hit@1=0.2886 Hit@5=0.5740 Hit@10=0.7039 MR=301.2 n=939
+05:16:57 | INFO    |            [multiref] MRR=0.4300 Hit@1=0.2830 Hit@5=0.5968 Hit@10=0.7477 MR=199.1 n=749
+05:16:57 | INFO    | epoch  750/1600 | loss=0.0019
+05:16:57 | INFO    |            [filtered] MRR=0.4424 Hit@1=0.3248 Hit@5=0.5687 Hit@10=0.6901 MR=300.7 n=939
+05:16:57 | INFO    |            [multiref] MRR=0.4544 Hit@1=0.3284 Hit@5=0.5874 Hit@10=0.7250 MR=196.7 n=749
+05:16:58 | INFO    |            -> new best filtered MRR=0.4424 (saved model_best.pt)
+05:16:58 | INFO    | epoch  760/1600 | loss=0.0004
+05:16:58 | INFO    |            [filtered] MRR=0.4352 Hit@1=0.3110 Hit@5=0.5676 Hit@10=0.6965 MR=292.7 n=939
+05:16:58 | INFO    |            [multiref] MRR=0.4446 Hit@1=0.3097 Hit@5=0.5861 Hit@10=0.7330 MR=190.7 n=749
+05:16:59 | INFO    | epoch  770/1600 | loss=0.0002
+05:16:59 | INFO    |            [filtered] MRR=0.4402 Hit@1=0.3216 Hit@5=0.5719 Hit@10=0.6816 MR=297.8 n=939
+05:16:59 | INFO    |            [multiref] MRR=0.4550 Hit@1=0.3284 Hit@5=0.5928 Hit@10=0.7196 MR=193.9 n=749
+05:16:59 | INFO    | epoch  780/1600 | loss=0.0006
+05:17:00 | INFO    |            [filtered] MRR=0.4341 Hit@1=0.3163 Hit@5=0.5559 Hit@10=0.6709 MR=298.4 n=939
+05:17:00 | INFO    |            [multiref] MRR=0.4453 Hit@1=0.3191 Hit@5=0.5754 Hit@10=0.7116 MR=194.7 n=749
+05:17:00 | INFO    | epoch  790/1600 | loss=0.0008
+05:17:00 | INFO    |            [filtered] MRR=0.4357 Hit@1=0.3248 Hit@5=0.5517 Hit@10=0.6528 MR=296.0 n=939
+05:17:00 | INFO    |            [multiref] MRR=0.4524 Hit@1=0.3351 Hit@5=0.5741 Hit@10=0.6943 MR=190.5 n=749
+05:17:01 | INFO    | epoch  800/1600 | loss=0.0022 | bootstrap: +2 mutual pairs (train=3086, pool=468)
+05:17:01 | INFO    |            [filtered] MRR=0.4443 Hit@1=0.3365 Hit@5=0.5644 Hit@10=0.6603 MR=298.5 n=939
+05:17:01 | INFO    |            [multiref] MRR=0.4638 Hit@1=0.3511 Hit@5=0.5888 Hit@10=0.7023 MR=194.0 n=749
+05:17:01 | INFO    |            -> new best filtered MRR=0.4443 (saved model_best.pt)
+05:17:02 | INFO    | epoch  810/1600 | loss=0.0037
+05:17:02 | INFO    |            [filtered] MRR=0.4402 Hit@1=0.3387 Hit@5=0.5527 Hit@10=0.6486 MR=298.6 n=939
+05:17:02 | INFO    |            [multiref] MRR=0.4629 Hit@1=0.3565 Hit@5=0.5768 Hit@10=0.6903 MR=195.5 n=749
+05:17:02 | INFO    | epoch  820/1600 | loss=0.0014
+05:17:02 | INFO    |            [filtered] MRR=0.4436 Hit@1=0.3376 Hit@5=0.5666 Hit@10=0.6624 MR=301.4 n=939
+05:17:02 | INFO    |            [multiref] MRR=0.4668 Hit@1=0.3565 Hit@5=0.5928 Hit@10=0.7036 MR=200.0 n=749
+05:17:03 | INFO    | epoch  830/1600 | loss=0.0000
+05:17:03 | INFO    |            [filtered] MRR=0.4394 Hit@1=0.3323 Hit@5=0.5580 Hit@10=0.6667 MR=304.6 n=939
+05:17:03 | INFO    |            [multiref] MRR=0.4601 Hit@1=0.3471 Hit@5=0.5808 Hit@10=0.7076 MR=203.4 n=749
+05:17:04 | INFO    | epoch  840/1600 | loss=0.0044
+05:17:04 | INFO    |            [filtered] MRR=0.4418 Hit@1=0.3323 Hit@5=0.5570 Hit@10=0.6645 MR=303.6 n=939
+05:17:04 | INFO    |            [multiref] MRR=0.4618 Hit@1=0.3458 Hit@5=0.5821 Hit@10=0.7063 MR=202.3 n=749
+05:17:04 | INFO    | epoch  850/1600 | loss=0.0011
+05:17:04 | INFO    |            [filtered] MRR=0.4394 Hit@1=0.3163 Hit@5=0.5793 Hit@10=0.6837 MR=304.6 n=939
+05:17:04 | INFO    |            [multiref] MRR=0.4467 Hit@1=0.3124 Hit@5=0.5995 Hit@10=0.7210 MR=202.3 n=749
+05:17:05 | INFO    | epoch  860/1600 | loss=0.0000
+05:17:05 | INFO    |            [filtered] MRR=0.4418 Hit@1=0.3216 Hit@5=0.5729 Hit@10=0.6816 MR=300.5 n=939
+05:17:05 | INFO    |            [multiref] MRR=0.4542 Hit@1=0.3244 Hit@5=0.5955 Hit@10=0.7156 MR=198.7 n=749
+05:17:06 | INFO    | epoch  870/1600 | loss=0.0000
+05:17:06 | INFO    |            [filtered] MRR=0.4470 Hit@1=0.3259 Hit@5=0.5793 Hit@10=0.6954 MR=296.6 n=939
+05:17:06 | INFO    |            [multiref] MRR=0.4605 Hit@1=0.3298 Hit@5=0.6008 Hit@10=0.7330 MR=192.1 n=749
+05:17:06 | INFO    |            -> new best filtered MRR=0.4470 (saved model_best.pt)
+05:17:07 | INFO    | epoch  880/1600 | loss=0.0011
+05:17:07 | INFO    |            [filtered] MRR=0.4502 Hit@1=0.3376 Hit@5=0.5719 Hit@10=0.6965 MR=293.8 n=939
+05:17:07 | INFO    |            [multiref] MRR=0.4694 Hit@1=0.3498 Hit@5=0.5928 Hit@10=0.7330 MR=191.0 n=749
+05:17:07 | INFO    |            -> new best filtered MRR=0.4502 (saved model_best.pt)
+05:17:07 | INFO    | epoch  890/1600 | loss=0.0008
+05:17:07 | INFO    |            [filtered] MRR=0.4530 Hit@1=0.3376 Hit@5=0.5761 Hit@10=0.7018 MR=301.7 n=939
+05:17:07 | INFO    |            [multiref] MRR=0.4707 Hit@1=0.3485 Hit@5=0.5981 Hit@10=0.7370 MR=199.3 n=749
+05:17:08 | INFO    |            -> new best filtered MRR=0.4530 (saved model_best.pt)
+05:17:08 | INFO    | epoch  900/1600 | loss=0.0000
+05:17:08 | INFO    |            [filtered] MRR=0.4540 Hit@1=0.3291 Hit@5=0.5868 Hit@10=0.7135 MR=301.0 n=939
+05:17:08 | INFO    |            [multiref] MRR=0.4692 Hit@1=0.3364 Hit@5=0.6075 Hit@10=0.7517 MR=201.4 n=749
+05:17:08 | INFO    |            -> new best filtered MRR=0.4540 (saved model_best.pt)
+05:17:09 | INFO    | epoch  910/1600 | loss=0.0001
+05:17:09 | INFO    |            [filtered] MRR=0.4416 Hit@1=0.3046 Hit@5=0.5996 Hit@10=0.7210 MR=304.4 n=939
+05:17:09 | INFO    |            [multiref] MRR=0.4528 Hit@1=0.3044 Hit@5=0.6275 Hit@10=0.7610 MR=201.9 n=749
+05:17:10 | INFO    | epoch  920/1600 | loss=0.0000
+05:17:10 | INFO    |            [filtered] MRR=0.4573 Hit@1=0.3323 Hit@5=0.5932 Hit@10=0.7114 MR=316.2 n=939
+05:17:10 | INFO    |            [multiref] MRR=0.4693 Hit@1=0.3351 Hit@5=0.6142 Hit@10=0.7490 MR=207.1 n=749
+05:17:10 | INFO    |            -> new best filtered MRR=0.4573 (saved model_best.pt)
+05:17:10 | INFO    | epoch  930/1600 | loss=0.0004
+05:17:10 | INFO    |            [filtered] MRR=0.4599 Hit@1=0.3344 Hit@5=0.5964 Hit@10=0.7178 MR=317.1 n=939
+05:17:10 | INFO    |            [multiref] MRR=0.4717 Hit@1=0.3364 Hit@5=0.6222 Hit@10=0.7570 MR=207.9 n=749
+05:17:11 | INFO    |            -> new best filtered MRR=0.4599 (saved model_best.pt)
+05:17:11 | INFO    | epoch  940/1600 | loss=0.0020
+05:17:11 | INFO    |            [filtered] MRR=0.4543 Hit@1=0.3227 Hit@5=0.6049 Hit@10=0.7220 MR=320.3 n=939
+05:17:11 | INFO    |            [multiref] MRR=0.4699 Hit@1=0.3298 Hit@5=0.6328 Hit@10=0.7597 MR=211.3 n=749
+05:17:12 | INFO    | epoch  950/1600 | loss=0.0001
+05:17:12 | INFO    |            [filtered] MRR=0.4618 Hit@1=0.3344 Hit@5=0.6006 Hit@10=0.7231 MR=318.2 n=939
+05:17:12 | INFO    |            [multiref] MRR=0.4735 Hit@1=0.3364 Hit@5=0.6235 Hit@10=0.7570 MR=209.5 n=749
+05:17:12 | INFO    |            -> new best filtered MRR=0.4618 (saved model_best.pt)
+05:17:13 | INFO    | epoch  960/1600 | loss=0.0001
+05:17:13 | INFO    |            [filtered] MRR=0.4582 Hit@1=0.3344 Hit@5=0.5921 Hit@10=0.7167 MR=298.7 n=939
+05:17:13 | INFO    |            [multiref] MRR=0.4734 Hit@1=0.3418 Hit@5=0.6128 Hit@10=0.7490 MR=189.9 n=749
+05:17:13 | INFO    | epoch  970/1600 | loss=0.0019
+05:17:13 | INFO    |            [filtered] MRR=0.4503 Hit@1=0.3355 Hit@5=0.5740 Hit@10=0.6965 MR=307.0 n=939
+05:17:13 | INFO    |            [multiref] MRR=0.4755 Hit@1=0.3525 Hit@5=0.6101 Hit@10=0.7316 MR=198.4 n=749
+05:17:14 | INFO    | epoch  980/1600 | loss=0.0017
+05:17:14 | INFO    |            [filtered] MRR=0.4404 Hit@1=0.3269 Hit@5=0.5623 Hit@10=0.6805 MR=308.0 n=939
+05:17:14 | INFO    |            [multiref] MRR=0.4676 Hit@1=0.3471 Hit@5=0.6021 Hit@10=0.7170 MR=198.4 n=749
+05:17:15 | INFO    | epoch  990/1600 | loss=0.0010
+05:17:15 | INFO    |            [filtered] MRR=0.4447 Hit@1=0.3301 Hit@5=0.5655 Hit@10=0.6805 MR=306.3 n=939
+05:17:15 | INFO    |            [multiref] MRR=0.4709 Hit@1=0.3485 Hit@5=0.6008 Hit@10=0.7156 MR=196.9 n=749
+05:17:15 | INFO    | epoch 1000/1600 | loss=0.0010 | bootstrap: +2 mutual pairs (train=3088, pool=466)
+05:17:15 | INFO    |            [filtered] MRR=0.4671 Hit@1=0.3504 Hit@5=0.5985 Hit@10=0.6997 MR=303.9 n=939
+05:17:15 | INFO    |            [multiref] MRR=0.4831 Hit@1=0.3591 Hit@5=0.6235 Hit@10=0.7356 MR=198.3 n=749
+05:17:16 | INFO    |            -> new best filtered MRR=0.4671 (saved model_best.pt)
+05:17:16 | INFO    | epoch 1010/1600 | loss=0.0006
+05:17:16 | INFO    |            [filtered] MRR=0.4595 Hit@1=0.3408 Hit@5=0.5911 Hit@10=0.6997 MR=301.8 n=939
+05:17:16 | INFO    |            [multiref] MRR=0.4749 Hit@1=0.3471 Hit@5=0.6155 Hit@10=0.7343 MR=193.6 n=749
+05:17:17 | INFO    | epoch 1020/1600 | loss=0.0000
+05:17:17 | INFO    |            [filtered] MRR=0.4598 Hit@1=0.3397 Hit@5=0.5900 Hit@10=0.7039 MR=311.2 n=939
+05:17:17 | INFO    |            [multiref] MRR=0.4760 Hit@1=0.3471 Hit@5=0.6168 Hit@10=0.7397 MR=201.5 n=749
+05:17:18 | INFO    | epoch 1030/1600 | loss=0.0000
+05:17:18 | INFO    |            [filtered] MRR=0.4539 Hit@1=0.3237 Hit@5=0.6070 Hit@10=0.7071 MR=310.1 n=939
+05:17:18 | INFO    |            [multiref] MRR=0.4694 Hit@1=0.3284 Hit@5=0.6382 Hit@10=0.7437 MR=201.2 n=749
+05:17:18 | INFO    | epoch 1040/1600 | loss=0.0000
+05:17:18 | INFO    |            [filtered] MRR=0.4535 Hit@1=0.3280 Hit@5=0.6006 Hit@10=0.7007 MR=313.4 n=939
+05:17:18 | INFO    |            [multiref] MRR=0.4668 Hit@1=0.3284 Hit@5=0.6315 Hit@10=0.7370 MR=205.3 n=749
+05:17:19 | INFO    | epoch 1050/1600 | loss=0.0000
+05:17:19 | INFO    |            [filtered] MRR=0.4614 Hit@1=0.3429 Hit@5=0.5932 Hit@10=0.7018 MR=305.6 n=939
+05:17:19 | INFO    |            [multiref] MRR=0.4807 Hit@1=0.3538 Hit@5=0.6235 Hit@10=0.7370 MR=193.6 n=749
+05:17:20 | INFO    | epoch 1060/1600 | loss=0.0010
+05:17:20 | INFO    |            [filtered] MRR=0.4605 Hit@1=0.3376 Hit@5=0.6017 Hit@10=0.7050 MR=310.9 n=939
+05:17:20 | INFO    |            [multiref] MRR=0.4795 Hit@1=0.3471 Hit@5=0.6302 Hit@10=0.7450 MR=203.2 n=749
+05:17:20 | INFO    | epoch 1070/1600 | loss=0.0000
+05:17:20 | INFO    |            [filtered] MRR=0.4605 Hit@1=0.3419 Hit@5=0.5953 Hit@10=0.7029 MR=308.4 n=939
+05:17:20 | INFO    |            [multiref] MRR=0.4808 Hit@1=0.3538 Hit@5=0.6235 Hit@10=0.7370 MR=200.8 n=749
+05:17:21 | INFO    | epoch 1080/1600 | loss=0.0003
+05:17:21 | INFO    |            [filtered] MRR=0.4634 Hit@1=0.3397 Hit@5=0.6113 Hit@10=0.7029 MR=310.0 n=939
+05:17:21 | INFO    |            [multiref] MRR=0.4825 Hit@1=0.3498 Hit@5=0.6422 Hit@10=0.7410 MR=206.7 n=749
+05:17:22 | INFO    | epoch 1090/1600 | loss=0.0000
+05:17:22 | INFO    |            [filtered] MRR=0.4534 Hit@1=0.3248 Hit@5=0.6092 Hit@10=0.6901 MR=325.1 n=939
+05:17:22 | INFO    |            [multiref] MRR=0.4702 Hit@1=0.3311 Hit@5=0.6382 Hit@10=0.7276 MR=214.9 n=749
+05:17:22 | INFO    | epoch 1100/1600 | loss=0.0000
+05:17:22 | INFO    |            [filtered] MRR=0.4597 Hit@1=0.3387 Hit@5=0.5900 Hit@10=0.6986 MR=323.9 n=939
+05:17:22 | INFO    |            [multiref] MRR=0.4799 Hit@1=0.3511 Hit@5=0.6182 Hit@10=0.7343 MR=213.8 n=749
+05:17:23 | INFO    | epoch 1110/1600 | loss=0.0001
+05:17:23 | INFO    |            [filtered] MRR=0.4606 Hit@1=0.3440 Hit@5=0.5889 Hit@10=0.6954 MR=325.3 n=939
+05:17:23 | INFO    |            [multiref] MRR=0.4824 Hit@1=0.3578 Hit@5=0.6168 Hit@10=0.7316 MR=216.2 n=749
+05:17:24 | INFO    | epoch 1120/1600 | loss=0.0004
+05:17:24 | INFO    |            [filtered] MRR=0.4657 Hit@1=0.3610 Hit@5=0.5783 Hit@10=0.6901 MR=328.0 n=939
+05:17:24 | INFO    |            [multiref] MRR=0.4850 Hit@1=0.3712 Hit@5=0.6061 Hit@10=0.7263 MR=217.7 n=749
+05:17:24 | INFO    | epoch 1130/1600 | loss=0.0000
+05:17:24 | INFO    |            [filtered] MRR=0.4691 Hit@1=0.3568 Hit@5=0.5879 Hit@10=0.6976 MR=329.5 n=939
+05:17:24 | INFO    |            [multiref] MRR=0.4867 Hit@1=0.3645 Hit@5=0.6155 Hit@10=0.7356 MR=218.2 n=749
+05:17:25 | INFO    |            -> new best filtered MRR=0.4691 (saved model_best.pt)
+05:17:25 | INFO    | epoch 1140/1600 | loss=0.0000
+05:17:25 | INFO    |            [filtered] MRR=0.4655 Hit@1=0.3482 Hit@5=0.5911 Hit@10=0.7018 MR=312.9 n=939
+05:17:25 | INFO    |            [multiref] MRR=0.4818 Hit@1=0.3551 Hit@5=0.6182 Hit@10=0.7383 MR=205.6 n=749
+05:17:26 | INFO    | epoch 1150/1600 | loss=0.0002
+05:17:26 | INFO    |            [filtered] MRR=0.4666 Hit@1=0.3493 Hit@5=0.5879 Hit@10=0.7061 MR=315.7 n=939
+05:17:26 | INFO    |            [multiref] MRR=0.4845 Hit@1=0.3591 Hit@5=0.6142 Hit@10=0.7423 MR=208.3 n=749
+05:17:27 | INFO    | epoch 1160/1600 | loss=0.0000
+05:17:27 | INFO    |            [filtered] MRR=0.4655 Hit@1=0.3419 Hit@5=0.6113 Hit@10=0.7093 MR=311.7 n=939
+05:17:27 | INFO    |            [multiref] MRR=0.4823 Hit@1=0.3485 Hit@5=0.6422 Hit@10=0.7450 MR=204.2 n=749
+05:17:28 | INFO    | epoch 1170/1600 | loss=0.0008
+05:17:28 | INFO    |            [filtered] MRR=0.4625 Hit@1=0.3333 Hit@5=0.6124 Hit@10=0.7114 MR=315.2 n=939
+05:17:28 | INFO    |            [multiref] MRR=0.4777 Hit@1=0.3378 Hit@5=0.6395 Hit@10=0.7490 MR=207.7 n=749
+05:17:28 | INFO    | epoch 1180/1600 | loss=0.0012
+05:17:29 | INFO    |            [filtered] MRR=0.4685 Hit@1=0.3482 Hit@5=0.5996 Hit@10=0.7146 MR=322.3 n=939
+05:17:29 | INFO    |            [multiref] MRR=0.4860 Hit@1=0.3551 Hit@5=0.6302 Hit@10=0.7517 MR=210.7 n=749
+05:17:29 | INFO    | epoch 1190/1600 | loss=0.0004
+05:17:29 | INFO    |            [filtered] MRR=0.4625 Hit@1=0.3312 Hit@5=0.6219 Hit@10=0.7231 MR=321.7 n=939
+05:17:29 | INFO    |            [multiref] MRR=0.4765 Hit@1=0.3324 Hit@5=0.6529 Hit@10=0.7637 MR=213.5 n=749
+05:17:30 | INFO    | epoch 1200/1600 | loss=0.0000 | bootstrap: empty pool
+05:17:30 | INFO    |            [filtered] MRR=0.4559 Hit@1=0.3184 Hit@5=0.6230 Hit@10=0.7188 MR=318.7 n=939
+05:17:30 | INFO    |            [multiref] MRR=0.4686 Hit@1=0.3164 Hit@5=0.6555 Hit@10=0.7570 MR=211.2 n=749
+05:17:30 | INFO    | epoch 1210/1600 | loss=0.0017
+05:17:31 | INFO    |            [filtered] MRR=0.4697 Hit@1=0.3472 Hit@5=0.6155 Hit@10=0.7114 MR=325.2 n=939
+05:17:31 | INFO    |            [multiref] MRR=0.4859 Hit@1=0.3511 Hit@5=0.6502 Hit@10=0.7503 MR=215.1 n=749
+05:17:31 | INFO    |            -> new best filtered MRR=0.4697 (saved model_best.pt)
+05:17:31 | INFO    | epoch 1220/1600 | loss=0.0007
+05:17:31 | INFO    |            [filtered] MRR=0.4572 Hit@1=0.3237 Hit@5=0.6187 Hit@10=0.7050 MR=302.9 n=939
+05:17:31 | INFO    |            [multiref] MRR=0.4702 Hit@1=0.3218 Hit@5=0.6515 Hit@10=0.7477 MR=198.5 n=749
+05:17:32 | INFO    | epoch 1230/1600 | loss=0.0004
+05:17:32 | INFO    |            [filtered] MRR=0.4338 Hit@1=0.2758 Hit@5=0.6230 Hit@10=0.7103 MR=298.5 n=939
+05:17:32 | INFO    |            [multiref] MRR=0.4390 Hit@1=0.2603 Hit@5=0.6529 Hit@10=0.7557 MR=195.0 n=749
+05:17:33 | INFO    | epoch 1240/1600 | loss=0.0008
+05:17:33 | INFO    |            [filtered] MRR=0.4433 Hit@1=0.2939 Hit@5=0.6305 Hit@10=0.7082 MR=298.6 n=939
+05:17:33 | INFO    |            [multiref] MRR=0.4520 Hit@1=0.2857 Hit@5=0.6609 Hit@10=0.7517 MR=192.7 n=749
+05:17:33 | INFO    | epoch 1250/1600 | loss=0.0000
+05:17:33 | INFO    |            [filtered] MRR=0.4379 Hit@1=0.2812 Hit@5=0.6305 Hit@10=0.7114 MR=304.2 n=939
+05:17:33 | INFO    |            [multiref] MRR=0.4456 Hit@1=0.2684 Hit@5=0.6622 Hit@10=0.7597 MR=193.8 n=749
+05:17:34 | INFO    | epoch 1260/1600 | loss=0.0037
+05:17:34 | INFO    |            [filtered] MRR=0.4389 Hit@1=0.2769 Hit@5=0.6390 Hit@10=0.7146 MR=314.6 n=939
+05:17:34 | INFO    |            [multiref] MRR=0.4458 Hit@1=0.2630 Hit@5=0.6716 Hit@10=0.7570 MR=204.8 n=749
+05:17:35 | INFO    | epoch 1270/1600 | loss=0.0000
+05:17:35 | INFO    |            [filtered] MRR=0.4440 Hit@1=0.2897 Hit@5=0.6337 Hit@10=0.7263 MR=311.1 n=939
+05:17:35 | INFO    |            [multiref] MRR=0.4519 Hit@1=0.2790 Hit@5=0.6662 Hit@10=0.7717 MR=200.4 n=749
+05:17:35 | INFO    | epoch 1280/1600 | loss=0.0000
+05:17:35 | INFO    |            [filtered] MRR=0.4352 Hit@1=0.2716 Hit@5=0.6358 Hit@10=0.7146 MR=311.4 n=939
+05:17:35 | INFO    |            [multiref] MRR=0.4411 Hit@1=0.2563 Hit@5=0.6676 Hit@10=0.7597 MR=201.4 n=749
+05:17:36 | INFO    | epoch 1290/1600 | loss=0.0010
+05:17:36 | INFO    |            [filtered] MRR=0.4436 Hit@1=0.2865 Hit@5=0.6368 Hit@10=0.7157 MR=311.3 n=939
+05:17:36 | INFO    |            [multiref] MRR=0.4512 Hit@1=0.2737 Hit@5=0.6676 Hit@10=0.7623 MR=202.2 n=749
+05:17:37 | INFO    | epoch 1300/1600 | loss=0.0000
+05:17:37 | INFO    |            [filtered] MRR=0.4498 Hit@1=0.2971 Hit@5=0.6347 Hit@10=0.7157 MR=316.7 n=939
+05:17:37 | INFO    |            [multiref] MRR=0.4580 Hit@1=0.2870 Hit@5=0.6636 Hit@10=0.7610 MR=206.2 n=749
+05:17:37 | INFO    | epoch 1310/1600 | loss=0.0001
+05:17:38 | INFO    |            [filtered] MRR=0.4466 Hit@1=0.2907 Hit@5=0.6411 Hit@10=0.7306 MR=323.5 n=939
+05:17:38 | INFO    |            [multiref] MRR=0.4554 Hit@1=0.2817 Hit@5=0.6716 Hit@10=0.7730 MR=212.3 n=749
+05:17:38 | INFO    | epoch 1320/1600 | loss=0.0000
+05:17:38 | INFO    |            [filtered] MRR=0.4518 Hit@1=0.2982 Hit@5=0.6475 Hit@10=0.7338 MR=309.8 n=939
+05:17:38 | INFO    |            [multiref] MRR=0.4602 Hit@1=0.2884 Hit@5=0.6809 Hit@10=0.7744 MR=207.2 n=749
+05:17:39 | INFO    | epoch 1330/1600 | loss=0.0005
+05:17:39 | INFO    |            [filtered] MRR=0.4388 Hit@1=0.2780 Hit@5=0.6347 Hit@10=0.7263 MR=304.1 n=939
+05:17:39 | INFO    |            [multiref] MRR=0.4444 Hit@1=0.2644 Hit@5=0.6636 Hit@10=0.7664 MR=203.4 n=749
+05:17:40 | INFO    | epoch 1340/1600 | loss=0.0000
+05:17:40 | INFO    |            [filtered] MRR=0.4288 Hit@1=0.2577 Hit@5=0.6337 Hit@10=0.7306 MR=304.4 n=939
+05:17:40 | INFO    |            [multiref] MRR=0.4325 Hit@1=0.2403 Hit@5=0.6636 Hit@10=0.7704 MR=201.1 n=749
+05:17:40 | INFO    | epoch 1350/1600 | loss=0.0000
+05:17:40 | INFO    |            [filtered] MRR=0.4618 Hit@1=0.3184 Hit@5=0.6337 Hit@10=0.7284 MR=308.8 n=939
+05:17:40 | INFO    |            [multiref] MRR=0.4728 Hit@1=0.3138 Hit@5=0.6622 Hit@10=0.7690 MR=204.5 n=749
+05:17:41 | INFO    | epoch 1360/1600 | loss=0.0000
+05:17:41 | INFO    |            [filtered] MRR=0.4371 Hit@1=0.2748 Hit@5=0.6347 Hit@10=0.7252 MR=305.3 n=939
+05:17:41 | INFO    |            [multiref] MRR=0.4423 Hit@1=0.2603 Hit@5=0.6636 Hit@10=0.7664 MR=201.6 n=749
+05:17:42 | INFO    | epoch 1370/1600 | loss=0.0000
+05:17:42 | INFO    |            [filtered] MRR=0.4473 Hit@1=0.2875 Hit@5=0.6411 Hit@10=0.7316 MR=305.9 n=939
+05:17:42 | INFO    |            [multiref] MRR=0.4555 Hit@1=0.2777 Hit@5=0.6716 Hit@10=0.7744 MR=201.9 n=749
+05:17:42 | INFO    | epoch 1380/1600 | loss=0.0010
+05:17:42 | INFO    |            [filtered] MRR=0.4732 Hit@1=0.3440 Hit@5=0.6241 Hit@10=0.7274 MR=303.2 n=939
+05:17:42 | INFO    |            [multiref] MRR=0.4870 Hit@1=0.3485 Hit@5=0.6515 Hit@10=0.7623 MR=199.2 n=749
+05:17:43 | INFO    |            -> new best filtered MRR=0.4732 (saved model_best.pt)
+05:17:43 | INFO    | epoch 1390/1600 | loss=0.0000
+05:17:43 | INFO    |            [filtered] MRR=0.4738 Hit@1=0.3450 Hit@5=0.6262 Hit@10=0.7306 MR=304.2 n=939
+05:17:43 | INFO    |            [multiref] MRR=0.4892 Hit@1=0.3511 Hit@5=0.6515 Hit@10=0.7623 MR=199.9 n=749
+05:17:43 | INFO    |            -> new best filtered MRR=0.4738 (saved model_best.pt)
+05:17:44 | INFO    | epoch 1400/1600 | loss=0.0019 | bootstrap: empty pool
+05:17:44 | INFO    |            [filtered] MRR=0.4571 Hit@1=0.3142 Hit@5=0.6337 Hit@10=0.7295 MR=304.1 n=939
+05:17:44 | INFO    |            [multiref] MRR=0.4675 Hit@1=0.3111 Hit@5=0.6595 Hit@10=0.7650 MR=200.5 n=749
+05:17:45 | INFO    | epoch 1410/1600 | loss=0.0042
+05:17:45 | INFO    |            [filtered] MRR=0.4598 Hit@1=0.3163 Hit@5=0.6347 Hit@10=0.7359 MR=314.8 n=939
+05:17:45 | INFO    |            [multiref] MRR=0.4715 Hit@1=0.3151 Hit@5=0.6609 Hit@10=0.7704 MR=208.7 n=749
+05:17:45 | INFO    | epoch 1420/1600 | loss=0.0001
+05:17:45 | INFO    |            [filtered] MRR=0.4540 Hit@1=0.3014 Hit@5=0.6379 Hit@10=0.7327 MR=314.1 n=939
+05:17:45 | INFO    |            [multiref] MRR=0.4617 Hit@1=0.2924 Hit@5=0.6649 Hit@10=0.7690 MR=206.4 n=749
+05:17:46 | INFO    | epoch 1430/1600 | loss=0.0000
+05:17:46 | INFO    |            [filtered] MRR=0.4512 Hit@1=0.2929 Hit@5=0.6432 Hit@10=0.7316 MR=313.6 n=939
+05:17:46 | INFO    |            [multiref] MRR=0.4598 Hit@1=0.2844 Hit@5=0.6742 Hit@10=0.7704 MR=206.3 n=749
+05:17:47 | INFO    | epoch 1440/1600 | loss=0.0000
+05:17:47 | INFO    |            [filtered] MRR=0.4607 Hit@1=0.3131 Hit@5=0.6400 Hit@10=0.7370 MR=320.7 n=939
+05:17:47 | INFO    |            [multiref] MRR=0.4689 Hit@1=0.3057 Hit@5=0.6676 Hit@10=0.7704 MR=210.1 n=749
+05:17:47 | INFO    | epoch 1450/1600 | loss=0.0000
+05:17:47 | INFO    |            [filtered] MRR=0.4503 Hit@1=0.2971 Hit@5=0.6326 Hit@10=0.7284 MR=317.6 n=939
+05:17:47 | INFO    |            [multiref] MRR=0.4596 Hit@1=0.2897 Hit@5=0.6595 Hit@10=0.7690 MR=209.9 n=749
+05:17:48 | INFO    | epoch 1460/1600 | loss=0.0002
+05:17:48 | INFO    |            [filtered] MRR=0.4474 Hit@1=0.2907 Hit@5=0.6294 Hit@10=0.7284 MR=315.9 n=939
+05:17:48 | INFO    |            [multiref] MRR=0.4570 Hit@1=0.2844 Hit@5=0.6555 Hit@10=0.7664 MR=209.1 n=749
+05:17:49 | INFO    | epoch 1470/1600 | loss=0.0002
+05:17:49 | INFO    |            [filtered] MRR=0.4555 Hit@1=0.3024 Hit@5=0.6390 Hit@10=0.7338 MR=315.0 n=939
+05:17:49 | INFO    |            [multiref] MRR=0.4632 Hit@1=0.2924 Hit@5=0.6689 Hit@10=0.7704 MR=207.4 n=749
+05:17:49 | INFO    | epoch 1480/1600 | loss=0.0000
+05:17:49 | INFO    |            [filtered] MRR=0.4435 Hit@1=0.2790 Hit@5=0.6443 Hit@10=0.7391 MR=318.6 n=939
+05:17:49 | INFO    |            [multiref] MRR=0.4491 Hit@1=0.2644 Hit@5=0.6742 Hit@10=0.7784 MR=210.6 n=749
+05:17:50 | INFO    | epoch 1490/1600 | loss=0.0016
+05:17:50 | INFO    |            [filtered] MRR=0.4509 Hit@1=0.2897 Hit@5=0.6496 Hit@10=0.7401 MR=321.9 n=939
+05:17:50 | INFO    |            [multiref] MRR=0.4564 Hit@1=0.2750 Hit@5=0.6796 Hit@10=0.7770 MR=212.9 n=749
+05:17:51 | INFO    | epoch 1500/1600 | loss=0.0000
+05:17:51 | INFO    |            [filtered] MRR=0.4337 Hit@1=0.2567 Hit@5=0.6486 Hit@10=0.7338 MR=322.6 n=939
+05:17:51 | INFO    |            [multiref] MRR=0.4359 Hit@1=0.2350 Hit@5=0.6796 Hit@10=0.7704 MR=213.0 n=749
+05:17:51 | INFO    | epoch 1510/1600 | loss=0.0000
+05:17:52 | INFO    |            [filtered] MRR=0.4427 Hit@1=0.2748 Hit@5=0.6507 Hit@10=0.7316 MR=321.2 n=939
+05:17:52 | INFO    |            [multiref] MRR=0.4479 Hit@1=0.2590 Hit@5=0.6822 Hit@10=0.7717 MR=212.2 n=749
+05:17:52 | INFO    | epoch 1520/1600 | loss=0.0006
+05:17:52 | INFO    |            [filtered] MRR=0.4285 Hit@1=0.2471 Hit@5=0.6518 Hit@10=0.7401 MR=316.1 n=939
+05:17:52 | INFO    |            [multiref] MRR=0.4302 Hit@1=0.2243 Hit@5=0.6836 Hit@10=0.7810 MR=209.9 n=749
+05:17:53 | INFO    | epoch 1530/1600 | loss=0.0002
+05:17:53 | INFO    |            [filtered] MRR=0.4301 Hit@1=0.2471 Hit@5=0.6592 Hit@10=0.7476 MR=325.7 n=939
+05:17:53 | INFO    |            [multiref] MRR=0.4320 Hit@1=0.2243 Hit@5=0.6889 Hit@10=0.7864 MR=215.2 n=749
+05:17:54 | INFO    | epoch 1540/1600 | loss=0.0044
+05:17:54 | INFO    |            [filtered] MRR=0.4393 Hit@1=0.2630 Hit@5=0.6560 Hit@10=0.7423 MR=327.5 n=939
+05:17:54 | INFO    |            [multiref] MRR=0.4419 Hit@1=0.2417 Hit@5=0.6876 Hit@10=0.7824 MR=216.3 n=749
+05:17:54 | INFO    | epoch 1550/1600 | loss=0.0003
+05:17:54 | INFO    |            [filtered] MRR=0.4370 Hit@1=0.2545 Hit@5=0.6603 Hit@10=0.7455 MR=328.9 n=939
+05:17:54 | INFO    |            [multiref] MRR=0.4421 Hit@1=0.2363 Hit@5=0.6969 Hit@10=0.7837 MR=213.8 n=749
+05:17:55 | INFO    | epoch 1560/1600 | loss=0.0000
+05:17:55 | INFO    |            [filtered] MRR=0.4381 Hit@1=0.2588 Hit@5=0.6571 Hit@10=0.7433 MR=333.0 n=939
+05:17:55 | INFO    |            [multiref] MRR=0.4429 Hit@1=0.2403 Hit@5=0.6929 Hit@10=0.7810 MR=217.6 n=749
+05:17:56 | INFO    | epoch 1570/1600 | loss=0.0013
+05:17:56 | INFO    |            [filtered] MRR=0.4531 Hit@1=0.2843 Hit@5=0.6550 Hit@10=0.7455 MR=329.9 n=939
+05:17:56 | INFO    |            [multiref] MRR=0.4609 Hit@1=0.2710 Hit@5=0.6903 Hit@10=0.7850 MR=217.6 n=749
+05:17:56 | INFO    | epoch 1580/1600 | loss=0.0001
+05:17:56 | INFO    |            [filtered] MRR=0.4625 Hit@1=0.3067 Hit@5=0.6486 Hit@10=0.7433 MR=334.4 n=939
+05:17:56 | INFO    |            [multiref] MRR=0.4730 Hit@1=0.2991 Hit@5=0.6822 Hit@10=0.7824 MR=219.9 n=749
+05:17:57 | INFO    | epoch 1590/1600 | loss=0.0007
+05:17:57 | INFO    |            [filtered] MRR=0.4634 Hit@1=0.3046 Hit@5=0.6592 Hit@10=0.7519 MR=334.4 n=939
+05:17:57 | INFO    |            [multiref] MRR=0.4757 Hit@1=0.2991 Hit@5=0.6956 Hit@10=0.7904 MR=220.4 n=749
+05:17:58 | INFO    | epoch 1600/1600 | loss=0.0002
+05:17:58 | INFO    |            [filtered] MRR=0.4530 Hit@1=0.2801 Hit@5=0.6645 Hit@10=0.7529 MR=340.7 n=939
+05:17:58 | INFO    |            [multiref] MRR=0.4616 Hit@1=0.2684 Hit@5=0.6969 Hit@10=0.7931 MR=222.5 n=749
+05:17:58 | INFO    | Done in 2.0 min. Best filtered MRR=0.4738 @ epoch 1390.
+05:17:58 | INFO    | Final evaluation on the test split, read once
+05:17:59 | INFO    |   [cosine] filtMRR=0.4791 H@1=0.3572 H@10=0.7524 n=3732 | mrefMRR=0.5057 H@1=0.3860
+05:17:59 | INFO    |   [  csls] filtMRR=0.4663 H@1=0.3288 H@10=0.7661 n=3732 | mrefMRR=0.5042 H@1=0.3673
+05:18:03 | INFO    |   [cosine] F1=0.5119 P=0.3919 R=0.7377 (threshold 0.937 from validation, validation F1=0.5399)
+05:18:03 | INFO    | Wrote experiments/rrea_broadMatch-pgx_20260929-051557/result.json
+05:18:03 | INFO    | Finished. Best validation MRR=0.4738 @ epoch 1390.
