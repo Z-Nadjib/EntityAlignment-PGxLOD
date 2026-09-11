@@ -1,0 +1,82 @@
+experiment:
+  name: bootea_broadMatch-onco
+  model: bootea
+  seed: 2026
+  device: cuda:1
+data:
+  csv_dir: Data/pgxlod_csv
+  cache_dir: Data/cache
+  regime: broadMatch/onco
+model:
+  embed_dim: 300
+  init: trunc_normal
+  normalize_embeddings: true
+  squared: true
+  normalize_relations: true
+train:
+  epochs: 1000
+  batch_size: 8192
+  align_batch_size: 4096
+  lr: 0.01
+  optimizer: adagrad
+  weight_decay: 0.0
+  lr_schedule: none
+  grad_clip: 0.0
+  early_stop_patience: 12
+  neg_samples: 10
+  pos_margin_kge: 0.01
+  neg_margin_kge: 2.0
+  neg_weight_kge: 0.2
+  swapping:
+    enabled: true
+    cap_per_role: 50
+    swap_pseudo: false
+  align_pos_margin: 0.0
+  align_neg_margin: 1.0
+  align_neg_weight: 1.0
+  align_loss_weight: 10.0
+  hard_negatives:
+    enabled: false
+    num_candidates: 50
+    refresh_every: 5
+    start_epoch: 10
+  eps_truncated:
+    enabled: true
+    num_candidates: 1000
+    refresh_every: 10
+    start_epoch: 20
+  bootstrap:
+    enabled: true
+    start_epoch: 30
+    every: 5
+    threshold: 0.7
+    pseudo_weight: 1.0
+    max_add: 9000
+  kge_reduction: sum
+eval:
+  every: 20
+  hits_at:
+  - 1
+  - 5
+  - 10
+  metric: csls
+  csls_k: 3
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots:
+    loss_curve: loss_curve.png
+    ranking_metrics: ranking_metrics.png
+  log_level: INFO
+_project_root: .
+_config_path: configs/bootea_broadmatch.yaml
+_run_dir: experiments/bootea_broadMatch-onco_20260929-054619
