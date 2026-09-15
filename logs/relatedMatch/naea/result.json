@@ -1,0 +1,96 @@
+{
+  "model": "naea",
+  "regime": "relatedMatch",
+  "config": "naea.yaml",
+  "seed": 2026,
+  "data_seed": 2024,
+  "selection": {
+    "block": "multiref",
+    "on": "validation carved from train",
+    "best_validation_MRR": 0.14764310612651038,
+    "best_epoch": 120
+  },
+  "minutes": 14.2,
+  "split": {
+    "relation": "relatedMatch",
+    "family": null,
+    "oriented": false,
+    "gold_pairs": 9090,
+    "clusters": 57,
+    "train_clusters": 56,
+    "test_clusters": 1,
+    "test_queries": 812,
+    "train_pairs": 2801,
+    "test_pairs": 6289,
+    "pair_test_ratio": 0.692,
+    "max_cluster_share": 0.955,
+    "splittable": false,
+    "intra_cluster": true,
+    "intra_cluster_mode": "pairs",
+    "anti_leak": true,
+    "leak_ratio": 0.0
+  },
+  "pairs": {
+    "fit": 2090,
+    "validation": 711,
+    "test": 6289
+  },
+  "final": {
+    "cosine": {
+      "filtered": {
+        "MRR": 0.022063483752693194,
+        "Hit@1": 0.003895690888853554,
+        "Hit@5": 0.020989028462394657,
+        "Hit@10": 0.03673079980919065,
+        "MeanRank": 1863.8250119255842,
+        "n": 12578
+      },
+      "multiref": {
+        "MRR": 0.0668916230419991,
+        "Hit@1": 0.027093596059113302,
+        "Hit@5": 0.06773399014778325,
+        "Hit@10": 0.13177339901477833,
+        "MeanRank": 1400.7273193760266,
+        "n": 812
+      },
+      "splittable": false,
+      "intra_cluster": true,
+      "leak_ratio": 0.0,
+      "n_queries": 812
+    },
+    "csls": {
+      "filtered": {
+        "MRR": 0.02090948927483867,
+        "Hit@1": 0.0035776753060899986,
+        "Hit@5": 0.01868341548735888,
+        "Hit@10": 0.037207823183335986,
+        "MeanRank": 8182.331054221657,
+        "n": 12578
+      },
+      "multiref": {
+        "MRR": 0.07152986563038924,
+        "Hit@1": 0.024630541871921183,
+        "Hit@5": 0.0874384236453202,
+        "Hit@10": 0.16625615763546797,
+        "MeanRank": 4830.591954022989,
+        "n": 812
+      },
+      "splittable": false,
+      "intra_cluster": true,
+      "leak_ratio": 0.0,
+      "n_queries": 812
+    },
+    "classification": {
+      "Precision": 0.09424083769633508,
+      "Recall": 0.08866995073891626,
+      "F1": 0.09137055837563453,
+      "score": "cosine",
+      "threshold": 0.9951573014259338,
+      "threshold_from": "validation",
+      "validation_F1": 0.15030674846625766,
+      "tol_k": 10,
+      "n_pos": 812,
+      "n_neg": 812
+    }
+  }
+}

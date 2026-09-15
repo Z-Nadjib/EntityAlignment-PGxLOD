@@ -1,0 +1,54 @@
+experiment:
+  name: mraea_relatedMatch
+  model: mraea
+  seed: 2026
+  device: cuda:0
+data:
+  csv_dir: Data/pgxlod_csv
+  cache_dir: Data/cache
+  regime: relatedMatch
+model:
+  node_hidden: 100
+  rel_hidden: 100
+  depth: 2
+  attn_heads: 2
+  dropout: 0.3
+train:
+  turns: 1
+  epoch_per_turn: 400
+  epochs: 400
+  lr: 0.001
+  optimizer: adam
+  rms_alpha: 0.9
+  rms_eps: 1.0e-07
+  weight_decay: 0.0
+  gamma: 3.0
+  csls_k: 10
+  early_stop_patience: 10
+eval:
+  every: 10
+  hits_at:
+  - 1
+  - 5
+  - 10
+  metric: csls
+  csls_k: 10
+  select: filtered
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots:
+    loss_curve: loss_curve.png
+    ranking_metrics: ranking_metrics.png
+  log_level: INFO
+_project_root: .
+_config_path: configs/mraea.yaml
+_run_dir: experiments/mraea_relatedMatch_20260929-055225

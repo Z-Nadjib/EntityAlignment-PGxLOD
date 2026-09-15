@@ -1,0 +1,135 @@
+05:50:09 | INFO    | Model: kecg | seed 2026 | device: cuda:0
+05:50:10 | INFO    | Regime relatedMatch | graph: 84,182 nodes, 131,238 triples, 50,435 UCPGx candidates
+05:50:10 | INFO    |   broadMatch/pgx   train=  3,744 test=  8,599 (70%) queries= 6,866 by cluster    leakage=0.00%
+05:50:10 | INFO    |   closeMatch       train=  2,738 test=  6,296 (70%) queries= 1,490 by cluster    leakage=0.00%
+05:50:10 | INFO    |   sameAs           train= 19,942 test= 46,531 (70%) queries=10,883 by cluster    leakage=0.00%
+05:50:10 | INFO    |   broadMatch/onco  train= 25,039 test= 47,737 (66%) queries= 2,032 intra-cluster leakage=0.00%
+05:50:10 | INFO    |   relatedMatch     train=  2,801 test=  6,289 (69%) queries=   812 intra-cluster leakage=0.00%
+05:50:10 | INFO    |   related          train=471,647 test=762,046 (62%) queries=16,977 intra-cluster leakage=0.00%
+05:50:10 | INFO    | Data: {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2090, 'val_pairs': 711, 'candidates': 50435, 'unlabeled_pool': 49739}
+05:50:12 | INFO    | Params: 10.78M
+05:50:12 | INFO    | Run directory: experiments/kecg_relatedMatch_20260929-055009
+05:50:12 | INFO    | KECG | device=cuda:0 | {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 2090, 'val_pairs': 711, 'candidates': 50435, 'unlabeled_pool': 49739} 
+05:50:13 | INFO    | epoch   25/1000 | loss=1.8432
+05:50:13 | INFO    |            [filtered] MRR=0.0185 Hit@1=0.0098 Hit@5=0.0190 Hit@10=0.0253 MR=5515.0 n=1422
+05:50:13 | INFO    |            [multiref] MRR=0.0626 Hit@1=0.0381 Hit@5=0.0730 Hit@10=0.0952 MR=2880.9 n=315
+05:50:13 | INFO    |            -> new best filtered MRR=0.0185 (saved model_best.pt)
+05:50:14 | INFO    | epoch   50/1000 | loss=2.9221
+05:50:14 | INFO    |            [filtered] MRR=0.0224 Hit@1=0.0155 Hit@5=0.0183 Hit@10=0.0281 MR=4712.6 n=1422
+05:50:14 | INFO    |            [multiref] MRR=0.0751 Hit@1=0.0571 Hit@5=0.0698 Hit@10=0.1079 MR=2377.9 n=315
+05:50:14 | INFO    |            -> new best filtered MRR=0.0224 (saved model_best.pt)
+05:50:15 | INFO    | epoch   75/1000 | loss=1.2871
+05:50:15 | INFO    |            [filtered] MRR=0.0234 Hit@1=0.0162 Hit@5=0.0197 Hit@10=0.0274 MR=3485.7 n=1422
+05:50:15 | INFO    |            [multiref] MRR=0.0787 Hit@1=0.0603 Hit@5=0.0762 Hit@10=0.1048 MR=1952.0 n=315
+05:50:15 | INFO    |            -> new best filtered MRR=0.0234 (saved model_best.pt)
+05:50:16 | INFO    | epoch  100/1000 | loss=2.8752
+05:50:16 | INFO    |            [filtered] MRR=0.0247 Hit@1=0.0176 Hit@5=0.0225 Hit@10=0.0295 MR=2839.5 n=1422
+05:50:16 | INFO    |            [multiref] MRR=0.0844 Hit@1=0.0667 Hit@5=0.0889 Hit@10=0.1143 MR=1407.1 n=315
+05:50:16 | INFO    |            -> new best filtered MRR=0.0247 (saved model_best.pt)
+05:50:17 | INFO    | epoch  125/1000 | loss=1.1393
+05:50:17 | INFO    |            [filtered] MRR=0.0257 Hit@1=0.0190 Hit@5=0.0211 Hit@10=0.0302 MR=2528.3 n=1422
+05:50:17 | INFO    |            [multiref] MRR=0.0885 Hit@1=0.0730 Hit@5=0.0825 Hit@10=0.1175 MR=1023.5 n=315
+05:50:17 | INFO    |            -> new best filtered MRR=0.0257 (saved model_best.pt)
+05:50:18 | INFO    | epoch  150/1000 | loss=2.8290
+05:50:18 | INFO    |            [filtered] MRR=0.0273 Hit@1=0.0204 Hit@5=0.0232 Hit@10=0.0316 MR=2580.4 n=1422
+05:50:18 | INFO    |            [multiref] MRR=0.0923 Hit@1=0.0762 Hit@5=0.0889 Hit@10=0.1206 MR=1024.4 n=315
+05:50:18 | INFO    |            -> new best filtered MRR=0.0273 (saved model_best.pt)
+05:50:19 | INFO    | epoch  175/1000 | loss=1.0178
+05:50:19 | INFO    |            [filtered] MRR=0.0288 Hit@1=0.0218 Hit@5=0.0253 Hit@10=0.0331 MR=2591.9 n=1422
+05:50:19 | INFO    |            [multiref] MRR=0.0994 Hit@1=0.0825 Hit@5=0.0984 Hit@10=0.1270 MR=1039.6 n=315
+05:50:19 | INFO    |            -> new best filtered MRR=0.0288 (saved model_best.pt)
+05:50:20 | INFO    | epoch  200/1000 | loss=2.7785
+05:50:20 | INFO    |            [filtered] MRR=0.0295 Hit@1=0.0218 Hit@5=0.0281 Hit@10=0.0331 MR=2807.3 n=1422
+05:50:20 | INFO    |            [multiref] MRR=0.1016 Hit@1=0.0825 Hit@5=0.1079 Hit@10=0.1270 MR=1108.3 n=315
+05:50:20 | INFO    |            -> new best filtered MRR=0.0295 (saved model_best.pt)
+05:50:21 | INFO    | epoch  225/1000 | loss=0.8682
+05:50:21 | INFO    |            [filtered] MRR=0.0290 Hit@1=0.0218 Hit@5=0.0267 Hit@10=0.0352 MR=3046.8 n=1422
+05:50:21 | INFO    |            [multiref] MRR=0.1002 Hit@1=0.0825 Hit@5=0.1048 Hit@10=0.1333 MR=1154.6 n=315
+05:50:22 | INFO    | epoch  250/1000 | loss=2.7233
+05:50:22 | INFO    |            [filtered] MRR=0.0295 Hit@1=0.0218 Hit@5=0.0274 Hit@10=0.0380 MR=3538.5 n=1422
+05:50:22 | INFO    |            [multiref] MRR=0.1022 Hit@1=0.0825 Hit@5=0.1079 Hit@10=0.1397 MR=1290.5 n=315
+05:50:23 | INFO    | epoch  275/1000 | loss=0.6147
+05:50:23 | INFO    |            [filtered] MRR=0.0297 Hit@1=0.0211 Hit@5=0.0288 Hit@10=0.0373 MR=4150.6 n=1422
+05:50:23 | INFO    |            [multiref] MRR=0.1025 Hit@1=0.0794 Hit@5=0.1111 Hit@10=0.1397 MR=1477.7 n=315
+05:50:23 | INFO    |            -> new best filtered MRR=0.0297 (saved model_best.pt)
+05:50:24 | INFO    | epoch  300/1000 | loss=2.6626
+05:50:24 | INFO    |            [filtered] MRR=0.0317 Hit@1=0.0239 Hit@5=0.0316 Hit@10=0.0373 MR=4840.5 n=1422
+05:50:24 | INFO    |            [multiref] MRR=0.1069 Hit@1=0.0857 Hit@5=0.1175 Hit@10=0.1397 MR=1659.0 n=315
+05:50:25 | INFO    |            -> new best filtered MRR=0.0317 (saved model_best.pt)
+05:50:25 | INFO    | epoch  325/1000 | loss=0.3639
+05:50:25 | INFO    |            [filtered] MRR=0.0314 Hit@1=0.0239 Hit@5=0.0316 Hit@10=0.0366 MR=5600.3 n=1422
+05:50:25 | INFO    |            [multiref] MRR=0.1061 Hit@1=0.0857 Hit@5=0.1175 Hit@10=0.1397 MR=1854.9 n=315
+05:50:26 | INFO    | epoch  350/1000 | loss=2.5968
+05:50:26 | INFO    |            [filtered] MRR=0.0313 Hit@1=0.0239 Hit@5=0.0309 Hit@10=0.0366 MR=6417.9 n=1422
+05:50:26 | INFO    |            [multiref] MRR=0.1074 Hit@1=0.0889 Hit@5=0.1143 Hit@10=0.1397 MR=2090.5 n=315
+05:50:27 | INFO    | epoch  375/1000 | loss=0.2274
+05:50:27 | INFO    |            [filtered] MRR=0.0307 Hit@1=0.0232 Hit@5=0.0302 Hit@10=0.0366 MR=7130.5 n=1422
+05:50:27 | INFO    |            [multiref] MRR=0.1028 Hit@1=0.0825 Hit@5=0.1111 Hit@10=0.1397 MR=2331.2 n=315
+05:50:28 | INFO    | epoch  400/1000 | loss=2.5283
+05:50:28 | INFO    |            [filtered] MRR=0.0306 Hit@1=0.0232 Hit@5=0.0302 Hit@10=0.0366 MR=7695.4 n=1422
+05:50:28 | INFO    |            [multiref] MRR=0.1020 Hit@1=0.0825 Hit@5=0.1111 Hit@10=0.1397 MR=2519.6 n=315
+05:50:29 | INFO    | epoch  425/1000 | loss=0.1474
+05:50:29 | INFO    |            [filtered] MRR=0.0304 Hit@1=0.0232 Hit@5=0.0295 Hit@10=0.0366 MR=8158.6 n=1422
+05:50:29 | INFO    |            [multiref] MRR=0.1020 Hit@1=0.0825 Hit@5=0.1079 Hit@10=0.1397 MR=2698.4 n=315
+05:50:30 | INFO    | epoch  450/1000 | loss=2.4561
+05:50:30 | INFO    |            [filtered] MRR=0.0317 Hit@1=0.0246 Hit@5=0.0295 Hit@10=0.0380 MR=8642.1 n=1422
+05:50:30 | INFO    |            [multiref] MRR=0.1067 Hit@1=0.0889 Hit@5=0.1079 Hit@10=0.1429 MR=2889.2 n=315
+05:50:30 | INFO    |            -> new best filtered MRR=0.0317 (saved model_best.pt)
+05:50:31 | INFO    | epoch  475/1000 | loss=0.0934
+05:50:31 | INFO    |            [filtered] MRR=0.0317 Hit@1=0.0246 Hit@5=0.0295 Hit@10=0.0366 MR=9076.4 n=1422
+05:50:31 | INFO    |            [multiref] MRR=0.1066 Hit@1=0.0889 Hit@5=0.1079 Hit@10=0.1397 MR=3053.5 n=315
+05:50:32 | INFO    | epoch  500/1000 | loss=2.3777
+05:50:32 | INFO    |            [filtered] MRR=0.0319 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0366 MR=9499.6 n=1422
+05:50:32 | INFO    |            [multiref] MRR=0.1082 Hit@1=0.0921 Hit@5=0.1079 Hit@10=0.1397 MR=3247.2 n=315
+05:50:32 | INFO    |            -> new best filtered MRR=0.0319 (saved model_best.pt)
+05:50:33 | INFO    | epoch  525/1000 | loss=0.0650
+05:50:33 | INFO    |            [filtered] MRR=0.0319 Hit@1=0.0253 Hit@5=0.0302 Hit@10=0.0359 MR=9820.0 n=1422
+05:50:33 | INFO    |            [multiref] MRR=0.1080 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1365 MR=3401.1 n=315
+05:50:34 | INFO    | epoch  550/1000 | loss=2.2954
+05:50:34 | INFO    |            [filtered] MRR=0.0328 Hit@1=0.0267 Hit@5=0.0302 Hit@10=0.0345 MR=10222.2 n=1422
+05:50:34 | INFO    |            [multiref] MRR=0.1102 Hit@1=0.0952 Hit@5=0.1111 Hit@10=0.1302 MR=3661.7 n=315
+05:50:34 | INFO    |            -> new best filtered MRR=0.0328 (saved model_best.pt)
+05:50:35 | INFO    | epoch  575/1000 | loss=0.0532
+05:50:35 | INFO    |            [filtered] MRR=0.0319 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0359 MR=10538.9 n=1422
+05:50:35 | INFO    |            [multiref] MRR=0.1084 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1365 MR=3847.4 n=315
+05:50:36 | INFO    | epoch  600/1000 | loss=2.2081
+05:50:36 | INFO    |            [filtered] MRR=0.0317 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0345 MR=10898.5 n=1422
+05:50:36 | INFO    |            [multiref] MRR=0.1085 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1333 MR=4091.7 n=315
+05:50:37 | INFO    | epoch  625/1000 | loss=0.0479
+05:50:37 | INFO    |            [filtered] MRR=0.0315 Hit@1=0.0253 Hit@5=0.0302 Hit@10=0.0345 MR=11141.2 n=1422
+05:50:37 | INFO    |            [multiref] MRR=0.1079 Hit@1=0.0921 Hit@5=0.1143 Hit@10=0.1333 MR=4332.7 n=315
+05:50:38 | INFO    | epoch  650/1000 | loss=2.1173
+05:50:38 | INFO    |            [filtered] MRR=0.0316 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0345 MR=11458.9 n=1422
+05:50:38 | INFO    |            [multiref] MRR=0.1078 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1333 MR=4639.9 n=315
+05:50:39 | INFO    | epoch  675/1000 | loss=0.0467
+05:50:39 | INFO    |            [filtered] MRR=0.0317 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0345 MR=11718.5 n=1422
+05:50:39 | INFO    |            [multiref] MRR=0.1083 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1333 MR=4868.8 n=315
+05:50:40 | INFO    | epoch  700/1000 | loss=2.0206
+05:50:40 | INFO    |            [filtered] MRR=0.0316 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0345 MR=11954.7 n=1422
+05:50:40 | INFO    |            [multiref] MRR=0.1084 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1333 MR=5074.5 n=315
+05:50:41 | INFO    | epoch  725/1000 | loss=0.0491
+05:50:41 | INFO    |            [filtered] MRR=0.0317 Hit@1=0.0253 Hit@5=0.0295 Hit@10=0.0352 MR=12141.7 n=1422
+05:50:41 | INFO    |            [multiref] MRR=0.1086 Hit@1=0.0921 Hit@5=0.1111 Hit@10=0.1365 MR=5253.6 n=315
+05:50:42 | INFO    | epoch  750/1000 | loss=1.9196
+05:50:42 | INFO    |            [filtered] MRR=0.0320 Hit@1=0.0253 Hit@5=0.0302 Hit@10=0.0373 MR=12332.5 n=1422
+05:50:42 | INFO    |            [multiref] MRR=0.1093 Hit@1=0.0921 Hit@5=0.1143 Hit@10=0.1460 MR=5494.6 n=315
+05:50:43 | INFO    | epoch  775/1000 | loss=0.0482
+05:50:43 | INFO    |            [filtered] MRR=0.0321 Hit@1=0.0253 Hit@5=0.0309 Hit@10=0.0373 MR=12522.7 n=1422
+05:50:43 | INFO    |            [multiref] MRR=0.1102 Hit@1=0.0921 Hit@5=0.1175 Hit@10=0.1460 MR=5680.4 n=315
+05:50:44 | INFO    | epoch  800/1000 | loss=1.8120
+05:50:44 | INFO    |            [filtered] MRR=0.0320 Hit@1=0.0253 Hit@5=0.0316 Hit@10=0.0387 MR=12682.2 n=1422
+05:50:44 | INFO    |            [multiref] MRR=0.1102 Hit@1=0.0921 Hit@5=0.1206 Hit@10=0.1524 MR=5856.2 n=315
+05:50:45 | INFO    | epoch  825/1000 | loss=0.0514
+05:50:45 | INFO    |            [filtered] MRR=0.0320 Hit@1=0.0253 Hit@5=0.0309 Hit@10=0.0387 MR=12851.8 n=1422
+05:50:45 | INFO    |            [multiref] MRR=0.1109 Hit@1=0.0921 Hit@5=0.1175 Hit@10=0.1524 MR=6057.9 n=315
+05:50:46 | INFO    | epoch  850/1000 | loss=1.7031
+05:50:46 | INFO    |            [filtered] MRR=0.0328 Hit@1=0.0253 Hit@5=0.0331 Hit@10=0.0394 MR=13022.6 n=1422
+05:50:46 | INFO    |            [multiref] MRR=0.1146 Hit@1=0.0921 Hit@5=0.1270 Hit@10=0.1524 MR=6284.4 n=315
+05:50:46 | INFO    |            early stop (best=0.0328 @ 550).
+05:50:46 | INFO    | Done in 0.6 min. Best filtered MRR=0.0328 @ epoch 550.
+05:50:46 | INFO    | Final evaluation on the test split, read once
+05:50:47 | INFO    |   [cosine] filtMRR=0.0062 H@1=0.0009 H@10=0.0052 n=12578 | mrefMRR=0.0303 H@1=0.0123
+05:50:47 | INFO    |   [  csls] filtMRR=0.0045 H@1=0.0008 H@10=0.0041 n=12578 | mrefMRR=0.0285 H@1=0.0111
+05:50:49 | INFO    |   [cosine] F1=0.0299 P=0.0233 R=0.0419 (threshold 0.923 from validation, validation F1=0.0661)
+05:50:49 | INFO    | Wrote experiments/kecg_relatedMatch_20260929-055009/result.json
+05:50:49 | INFO    | Finished. Best validation MRR=0.0328 @ epoch 550.
