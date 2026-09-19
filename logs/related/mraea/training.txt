@@ -1,0 +1,68 @@
+06:09:27 | INFO    | Model: mraea | seed 2026 | device: cuda:0
+06:09:28 | INFO    | Regime related | graph: 84,182 nodes, 131,238 triples, 50,435 UCPGx candidates
+06:09:28 | INFO    |   broadMatch/pgx   train=  3,744 test=  8,599 (70%) queries= 6,866 by cluster    leakage=0.00%
+06:09:28 | INFO    |   closeMatch       train=  2,738 test=  6,296 (70%) queries= 1,490 by cluster    leakage=0.00%
+06:09:28 | INFO    |   sameAs           train= 19,942 test= 46,531 (70%) queries=10,883 by cluster    leakage=0.00%
+06:09:28 | INFO    |   broadMatch/onco  train= 25,039 test= 47,737 (66%) queries= 2,032 intra-cluster leakage=0.00%
+06:09:28 | INFO    |   relatedMatch     train=  2,801 test=  6,289 (69%) queries=   812 intra-cluster leakage=0.00%
+06:09:28 | INFO    |   related          train=471,647 test=762,046 (62%) queries=16,977 intra-cluster leakage=0.00%
+06:09:28 | INFO    | Data: {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 353735, 'val_pairs': 117912, 'candidates': 50435, 'unlabeled_pool': 27270}
+06:09:31 | INFO    | Params: 16.84M
+06:09:31 | INFO    | Run directory: experiments/mraea_related_20260929-060927
+06:09:31 | INFO    | MRAEA | device=cuda:0 | {'num_entities': 84182, 'num_relations': 13, 'triples': 131238, 'train_pairs': 353735, 'val_pairs': 117912, 'candidates': 50435, 'unlabeled_pool': 27270} turns=4 x 150
+06:09:33 | INFO    | epoch   25/600 | loss=0.0402
+06:09:34 | INFO    |            [filtered] MRR=0.4556 Hit@1=0.3892 Hit@5=0.5150 Hit@10=0.5693 MR=127.6 n=18523
+06:09:34 | INFO    |            [multiref] MRR=0.3504 Hit@1=0.2487 Hit@5=0.4460 Hit@10=0.5880 MR=179.6 n=1500
+06:09:34 | INFO    |            -> new best multiref MRR=0.3504 (saved model_best.pt)
+06:09:35 | INFO    | epoch   50/600 | loss=0.0329
+06:09:36 | INFO    |            [filtered] MRR=0.5190 Hit@1=0.4235 Hit@5=0.6216 Hit@10=0.7068 MR=59.2 n=18523
+06:09:36 | INFO    |            [multiref] MRR=0.3682 Hit@1=0.2633 Hit@5=0.4680 Hit@10=0.6153 MR=89.3 n=1500
+06:09:37 | INFO    |            -> new best multiref MRR=0.3682 (saved model_best.pt)
+06:09:38 | INFO    | epoch   75/600 | loss=0.0305
+06:09:39 | INFO    |            [filtered] MRR=0.5758 Hit@1=0.4646 Hit@5=0.7130 Hit@10=0.7741 MR=43.4 n=18523
+06:09:39 | INFO    |            [multiref] MRR=0.3714 Hit@1=0.2633 Hit@5=0.4727 Hit@10=0.6273 MR=68.2 n=1500
+06:09:39 | INFO    |            -> new best multiref MRR=0.3714 (saved model_best.pt)
+06:09:41 | INFO    | epoch  100/600 | loss=0.0281
+06:09:42 | INFO    |            [filtered] MRR=0.6029 Hit@1=0.4927 Hit@5=0.7395 Hit@10=0.7946 MR=36.5 n=18523
+06:09:42 | INFO    |            [multiref] MRR=0.3734 Hit@1=0.2627 Hit@5=0.4753 Hit@10=0.6347 MR=60.3 n=1500
+06:09:42 | INFO    |            -> new best multiref MRR=0.3734 (saved model_best.pt)
+06:09:43 | INFO    | epoch  125/600 | loss=0.0275
+06:09:44 | INFO    |            [filtered] MRR=0.6102 Hit@1=0.4978 Hit@5=0.7463 Hit@10=0.8070 MR=32.7 n=18523
+06:09:44 | INFO    |            [multiref] MRR=0.3734 Hit@1=0.2620 Hit@5=0.4793 Hit@10=0.6367 MR=54.2 n=1500
+06:09:46 | INFO    | epoch  150/600 | loss=0.0283 | bootstrap: +11945 mutual pairs (train=365680, pool=2435)
+06:09:47 | INFO    |            [filtered] MRR=0.6040 Hit@1=0.4806 Hit@5=0.7572 Hit@10=0.8172 MR=29.7 n=18523
+06:09:47 | INFO    |            [multiref] MRR=0.3767 Hit@1=0.2647 Hit@5=0.4860 Hit@10=0.6407 MR=47.2 n=1500
+06:09:47 | INFO    |            -> new best multiref MRR=0.3767 (saved model_best.pt)
+06:09:48 | INFO    | epoch  175/600 | loss=0.0255
+06:09:49 | INFO    |            [filtered] MRR=0.5942 Hit@1=0.4618 Hit@5=0.7584 Hit@10=0.8187 MR=27.2 n=18523
+06:09:49 | INFO    |            [multiref] MRR=0.3716 Hit@1=0.2567 Hit@5=0.4787 Hit@10=0.6387 MR=44.1 n=1500
+06:09:51 | INFO    | epoch  200/600 | loss=0.0263
+06:09:52 | INFO    |            [filtered] MRR=0.5919 Hit@1=0.4497 Hit@5=0.7663 Hit@10=0.8278 MR=25.9 n=18523
+06:09:52 | INFO    |            [multiref] MRR=0.3793 Hit@1=0.2667 Hit@5=0.4793 Hit@10=0.6413 MR=42.3 n=1500
+06:09:52 | INFO    |            -> new best multiref MRR=0.3793 (saved model_best.pt)
+06:09:53 | INFO    | epoch  225/600 | loss=0.0245
+06:09:54 | INFO    |            [filtered] MRR=0.5761 Hit@1=0.4257 Hit@5=0.7601 Hit@10=0.8241 MR=25.8 n=18523
+06:09:54 | INFO    |            [multiref] MRR=0.3773 Hit@1=0.2660 Hit@5=0.4800 Hit@10=0.6400 MR=41.3 n=1500
+06:09:56 | INFO    | epoch  250/600 | loss=0.0248
+06:09:57 | INFO    |            [filtered] MRR=0.5599 Hit@1=0.3974 Hit@5=0.7610 Hit@10=0.8271 MR=24.8 n=18523
+06:09:57 | INFO    |            [multiref] MRR=0.3687 Hit@1=0.2540 Hit@5=0.4693 Hit@10=0.6420 MR=38.3 n=1500
+06:09:58 | INFO    | epoch  275/600 | loss=0.0256
+06:09:59 | INFO    |            [filtered] MRR=0.5418 Hit@1=0.3741 Hit@5=0.7493 Hit@10=0.8198 MR=25.3 n=18523
+06:09:59 | INFO    |            [multiref] MRR=0.3724 Hit@1=0.2573 Hit@5=0.4760 Hit@10=0.6460 MR=38.7 n=1500
+06:10:01 | INFO    | epoch  300/600 | loss=0.0247 | bootstrap: +1069 mutual pairs (train=366749, pool=1366)
+06:10:02 | INFO    |            [filtered] MRR=0.5193 Hit@1=0.3483 Hit@5=0.7326 Hit@10=0.8071 MR=25.1 n=18523
+06:10:02 | INFO    |            [multiref] MRR=0.3680 Hit@1=0.2467 Hit@5=0.4833 Hit@10=0.6453 MR=38.2 n=1500
+06:10:03 | INFO    | epoch  325/600 | loss=0.0248
+06:10:04 | INFO    |            [filtered] MRR=0.5056 Hit@1=0.3324 Hit@5=0.7147 Hit@10=0.7947 MR=25.7 n=18523
+06:10:04 | INFO    |            [multiref] MRR=0.3695 Hit@1=0.2540 Hit@5=0.4820 Hit@10=0.6467 MR=37.6 n=1500
+06:10:06 | INFO    | epoch  350/600 | loss=0.0254
+06:10:07 | INFO    |            [filtered] MRR=0.4802 Hit@1=0.3028 Hit@5=0.6939 Hit@10=0.7783 MR=26.6 n=18523
+06:10:07 | INFO    |            [multiref] MRR=0.3666 Hit@1=0.2500 Hit@5=0.4827 Hit@10=0.6447 MR=37.4 n=1500
+06:10:07 | INFO    |            early stop (best=0.3793 @ 200).
+06:10:08 | INFO    | Done in 0.6 min. Best multiref MRR=0.3793 @ epoch 200.
+06:10:08 | INFO    | Final evaluation on the test split, read once
+06:10:18 | INFO    |   [cosine] filtMRR=0.5525 H@1=0.4119 H@10=0.7899 n=264830 | mrefMRR=0.8707 H@1=0.8033
+06:10:28 | INFO    |   [  csls] filtMRR=0.5061 H@1=0.3598 H@10=0.7614 n=264830 | mrefMRR=0.8637 H@1=0.7940
+06:10:34 | INFO    |   [cosine] F1=0.6954 P=0.5406 R=0.9747 (threshold 0.926 from validation, validation F1=0.4489)
+06:10:34 | INFO    | Wrote experiments/mraea_related_20260929-060927/result.json
+06:10:34 | INFO    | Finished. Best validation MRR=0.3793 @ epoch 200.

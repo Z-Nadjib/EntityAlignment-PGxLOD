@@ -1,0 +1,96 @@
+{
+  "model": "bootea",
+  "regime": "related",
+  "config": "bootea_related.yaml",
+  "seed": 2026,
+  "data_seed": 2024,
+  "selection": {
+    "block": "multiref",
+    "on": "validation carved from train",
+    "best_validation_MRR": 0.3784290732405437,
+    "best_epoch": 80
+  },
+  "minutes": 12.0,
+  "split": {
+    "relation": "related",
+    "family": null,
+    "oriented": false,
+    "gold_pairs": 1233693,
+    "clusters": 1189,
+    "train_clusters": 1188,
+    "test_clusters": 1,
+    "test_queries": 16977,
+    "train_pairs": 471647,
+    "test_pairs": 762046,
+    "pair_test_ratio": 0.618,
+    "max_cluster_share": 0.882,
+    "splittable": false,
+    "intra_cluster": true,
+    "intra_cluster_mode": "pairs",
+    "anti_leak": true,
+    "leak_ratio": 0.0
+  },
+  "pairs": {
+    "fit": 353735,
+    "validation": 117912,
+    "test": 762046
+  },
+  "final": {
+    "cosine": {
+      "filtered": {
+        "MRR": 0.5892798955876045,
+        "Hit@1": 0.46557036589510253,
+        "Hit@5": 0.733772608843409,
+        "Hit@10": 0.7800060416115999,
+        "MeanRank": 102.11149039006155,
+        "n": 264830
+      },
+      "multiref": {
+        "MRR": 0.8647103516174611,
+        "Hit@1": 0.7926666666666666,
+        "Hit@5": 0.958,
+        "Hit@10": 0.976,
+        "MeanRank": 24.2165,
+        "n": 3000
+      },
+      "splittable": false,
+      "intra_cluster": true,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "csls": {
+      "filtered": {
+        "MRR": 0.5150486390286368,
+        "Hit@1": 0.3955707434958275,
+        "Hit@5": 0.653830759355058,
+        "Hit@10": 0.7084922403051014,
+        "MeanRank": 1778.81143752596,
+        "n": 264830
+      },
+      "multiref": {
+        "MRR": 0.8585884754099601,
+        "Hit@1": 0.7843333333333333,
+        "Hit@5": 0.9563333333333334,
+        "Hit@10": 0.9733333333333334,
+        "MeanRank": 211.975,
+        "n": 3000
+      },
+      "splittable": false,
+      "intra_cluster": true,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "classification": {
+      "Precision": 0.9399106780349168,
+      "Recall": 0.7716666666666666,
+      "F1": 0.8475196778326927,
+      "score": "cosine",
+      "threshold": 0.9034553170204163,
+      "threshold_from": "validation",
+      "validation_F1": 0.5750000000000001,
+      "tol_k": 10,
+      "n_pos": 3000,
+      "n_neg": 3000
+    }
+  }
+}

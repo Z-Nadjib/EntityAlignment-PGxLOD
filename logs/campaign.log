@@ -1,0 +1,97 @@
+[05:14:56] cuda:0 -> gcnalign broadMatch/pgx
+[05:14:56] cuda:1 -> kecg broadMatch/pgx
+[05:15:12] cuda:0 <- gcnalign broadMatch/pgx: ok (0.3 min)   (1/48)
+[05:15:12] cuda:0 -> alinet broadMatch/pgx
+[05:15:23] cuda:1 <- kecg broadMatch/pgx: ok (0.4 min)   (2/48)
+[05:15:23] cuda:1 -> mraea broadMatch/pgx
+[05:15:56] cuda:0 <- alinet broadMatch/pgx: ok (0.7 min)   (3/48)
+[05:15:56] cuda:0 -> rrea broadMatch/pgx
+[05:16:39] cuda:1 <- mraea broadMatch/pgx: ok (1.3 min)   (4/48)
+[05:16:39] cuda:1 -> bootea broadMatch/pgx
+[05:18:04] cuda:0 <- rrea broadMatch/pgx: ok (2.1 min)   (5/48)
+[05:18:04] cuda:0 -> jape broadMatch/pgx
+[05:18:30] cuda:1 <- bootea broadMatch/pgx: ok (1.9 min)   (6/48)
+[05:18:30] cuda:1 -> naea broadMatch/pgx
+[05:18:40] cuda:0 <- jape broadMatch/pgx: ok (0.6 min)   (7/48)
+[05:18:40] cuda:0 -> gcnalign closeMatch
+[05:19:20] cuda:0 <- gcnalign closeMatch: ok (0.7 min)   (8/48)
+[05:19:20] cuda:0 -> kecg closeMatch
+[05:20:08] cuda:0 <- kecg closeMatch: ok (0.8 min)   (9/48)
+[05:20:08] cuda:0 -> alinet closeMatch
+[05:21:47] cuda:0 <- alinet closeMatch: ok (1.6 min)   (10/48)
+[05:21:47] cuda:0 -> mraea closeMatch
+[05:22:18] cuda:0 <- mraea closeMatch: ok (0.5 min)   (11/48)
+[05:22:18] cuda:0 -> rrea closeMatch
+[05:22:47] cuda:0 <- rrea closeMatch: ok (0.5 min)   (12/48)
+[05:22:47] cuda:0 -> bootea closeMatch
+[05:23:38] cuda:0 <- bootea closeMatch: ok (0.8 min)   (13/48)
+[05:23:38] cuda:0 -> jape closeMatch
+[05:24:20] cuda:0 <- jape closeMatch: ok (0.7 min)   (14/48)
+[05:24:20] cuda:0 -> naea closeMatch
+[05:29:29] cuda:1 <- naea broadMatch/pgx: ok (11.0 min)   (15/48)
+[05:29:29] cuda:1 -> gcnalign sameAs
+[05:29:54] cuda:1 <- gcnalign sameAs: ok (0.4 min)   (16/48)
+[05:29:54] cuda:1 -> kecg sameAs
+[05:31:04] cuda:1 <- kecg sameAs: ok (1.2 min)   (17/48)
+[05:31:04] cuda:1 -> alinet sameAs
+[05:33:09] cuda:1 <- alinet sameAs: ok (2.1 min)   (18/48)
+[05:33:09] cuda:1 -> mraea sameAs
+[05:33:33] cuda:1 <- mraea sameAs: ok (0.4 min)   (19/48)
+[05:33:33] cuda:1 -> rrea sameAs
+[05:34:01] cuda:1 <- rrea sameAs: ok (0.5 min)   (20/48)
+[05:34:01] cuda:1 -> bootea sameAs
+[05:35:12] cuda:1 <- bootea sameAs: ok (1.2 min)   (21/48)
+[05:35:12] cuda:1 -> jape sameAs
+[05:35:45] cuda:1 <- jape sameAs: ok (0.6 min)   (22/48)
+[05:35:45] cuda:1 -> naea sameAs
+[05:40:55] cuda:0 <- naea closeMatch: ok (16.6 min)   (23/48)
+[05:40:55] cuda:0 -> gcnalign broadMatch/onco
+[05:41:17] cuda:0 <- gcnalign broadMatch/onco: ok (0.4 min)   (24/48)
+[05:41:17] cuda:0 -> kecg broadMatch/onco
+[05:42:09] cuda:0 <- kecg broadMatch/onco: ok (0.9 min)   (25/48)
+[05:42:09] cuda:0 -> alinet broadMatch/onco
+[05:44:18] cuda:0 <- alinet broadMatch/onco: ok (2.2 min)   (26/48)
+[05:44:18] cuda:0 -> mraea broadMatch/onco
+[05:45:46] cuda:0 <- mraea broadMatch/onco: ok (1.5 min)   (27/48)
+[05:45:46] cuda:0 -> rrea broadMatch/onco
+[05:46:17] cuda:1 <- naea sameAs: ok (10.5 min)   (28/48)
+[05:46:17] cuda:1 -> bootea broadMatch/onco
+[05:48:22] cuda:0 <- rrea broadMatch/onco: ok (2.6 min)   (29/48)
+[05:48:22] cuda:0 -> jape broadMatch/onco
+[05:48:42] cuda:1 <- bootea broadMatch/onco: ok (2.4 min)   (30/48)
+[05:48:42] cuda:1 -> naea broadMatch/onco
+[05:49:48] cuda:0 <- jape broadMatch/onco: ok (1.4 min)   (31/48)
+[05:49:48] cuda:0 -> gcnalign relatedMatch
+[05:50:08] cuda:0 <- gcnalign relatedMatch: ok (0.3 min)   (32/48)
+[05:50:08] cuda:0 -> kecg relatedMatch
+[05:50:50] cuda:0 <- kecg relatedMatch: ok (0.7 min)   (33/48)
+[05:50:50] cuda:0 -> alinet relatedMatch
+[05:52:24] cuda:0 <- alinet relatedMatch: ok (1.6 min)   (34/48)
+[05:52:24] cuda:0 -> mraea relatedMatch
+[05:52:54] cuda:0 <- mraea relatedMatch: ok (0.5 min)   (35/48)
+[05:52:54] cuda:0 -> rrea relatedMatch
+[05:53:32] cuda:0 <- rrea relatedMatch: ok (0.6 min)   (36/48)
+[05:53:32] cuda:0 -> bootea relatedMatch
+[05:54:24] cuda:0 <- bootea relatedMatch: ok (0.9 min)   (37/48)
+[05:54:24] cuda:0 -> jape relatedMatch
+[05:55:08] cuda:0 <- jape relatedMatch: ok (0.7 min)   (38/48)
+[05:55:08] cuda:0 -> naea relatedMatch
+[06:01:28] cuda:1 <- naea broadMatch/onco: ok (12.8 min)   (39/48)
+[06:01:28] cuda:1 -> gcnalign related
+[06:04:37] cuda:1 <- gcnalign related: ok (3.1 min)   (40/48)
+[06:04:37] cuda:1 -> kecg related
+[06:06:02] cuda:1 <- kecg related: ok (1.4 min)   (41/48)
+[06:06:02] cuda:1 -> alinet related
+[06:09:25] cuda:0 <- naea relatedMatch: ok (14.3 min)   (42/48)
+[06:09:25] cuda:0 -> mraea related
+[06:10:35] cuda:0 <- mraea related: ok (1.2 min)   (43/48)
+[06:10:35] cuda:0 -> rrea related
+[06:12:52] cuda:0 <- rrea related: ok (2.3 min)   (44/48)
+[06:12:52] cuda:0 -> bootea related
+[06:18:41] cuda:1 <- alinet related: ok (12.7 min)   (45/48)
+[06:18:41] cuda:1 -> jape related
+[06:22:54] cuda:1 <- jape related: ok (4.2 min)   (46/48)
+[06:22:54] cuda:1 -> naea related
+[06:25:26] cuda:0 <- bootea related: ok (12.6 min)   (47/48)
+[06:51:50] cuda:1 <- naea related: ok (28.9 min)   (48/48)
+campaign over, 48 results indexed

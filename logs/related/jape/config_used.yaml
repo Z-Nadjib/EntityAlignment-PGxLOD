@@ -1,0 +1,53 @@
+experiment:
+  name: jape_related
+  model: jape
+  seed: 2026
+  device: cuda:1
+data:
+  csv_dir: Data/pgxlod_csv
+  cache_dir: Data/cache
+  regime: related
+model:
+  embed_dim: 400
+  init: xavier
+  normalize_embeddings: true
+  squared: true
+  normalize_relations: true
+train:
+  epochs: 400
+  batch_size: 8192
+  lr: 0.01
+  optimizer: adam
+  weight_decay: 0.0
+  grad_clip: 0.0
+  early_stop_patience: 15
+  neg_samples: 10
+  margin: 1.0
+  merge: link
+eval:
+  every: 25
+  hits_at:
+  - 1
+  - 5
+  - 10
+  metric: csls
+  csls_k: 3
+  select: multiref
+  clf_tol_k: 10
+logging:
+  output_dir: experiments
+  log_file: training.txt
+  config_dump: config_used.yaml
+  save_best: true
+  save_last: true
+  checkpoint_name: model.pt
+  embeddings_name: embeddings.pt
+  metrics_csv: metrics.csv
+  loss_csv: loss.csv
+  plots:
+    loss_curve: loss_curve.png
+    ranking_metrics: ranking_metrics.png
+  log_level: INFO
+_project_root: .
+_config_path: configs/jape_related.yaml
+_run_dir: experiments/jape_related_20260929-061843
