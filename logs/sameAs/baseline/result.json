@@ -1,0 +1,87 @@
+{
+  "model": "baseline",
+  "regime": "sameAs",
+  "data_seed": 2024,
+  "csls_k": 3,
+  "split": {
+    "relation": "sameAs",
+    "family": null,
+    "oriented": false,
+    "gold_pairs": 66473,
+    "clusters": 5138,
+    "train_clusters": 1094,
+    "test_clusters": 4044,
+    "test_queries": 10883,
+    "train_pairs": 19942,
+    "test_pairs": 46531,
+    "pair_test_ratio": 0.7,
+    "max_cluster_share": 0.251,
+    "splittable": true,
+    "intra_cluster": false,
+    "intra_cluster_mode": null,
+    "anti_leak": true,
+    "leak_ratio": 0.0
+  },
+  "pairs": {
+    "test": 46531
+  },
+  "final": {
+    "cosine": {
+      "filtered": {
+        "MRR": 1.0,
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.0,
+        "n": 25720
+      },
+      "multiref": {
+        "MRR": 1.0,
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.0,
+        "n": 3000
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "csls": {
+      "filtered": {
+        "MRR": 1.0,
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.0,
+        "n": 25720
+      },
+      "multiref": {
+        "MRR": 1.0,
+        "Hit@1": 1.0,
+        "Hit@5": 1.0,
+        "Hit@10": 1.0,
+        "MeanRank": 1.0,
+        "n": 3000
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 3000
+    },
+    "classification": {
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1": 1.0,
+      "score": "cosine",
+      "threshold": 1.0,
+      "threshold_from": "validation",
+      "validation_F1": 1.0,
+      "tol_k": 10,
+      "n_pos": 3000,
+      "n_neg": 3000
+    }
+  },
+  "minutes": 0.4
+}

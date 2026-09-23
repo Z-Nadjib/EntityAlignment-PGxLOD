@@ -1,0 +1,87 @@
+{
+  "model": "baseline",
+  "regime": "closeMatch",
+  "data_seed": 2024,
+  "csls_k": 3,
+  "split": {
+    "relation": "closeMatch",
+    "family": null,
+    "oriented": false,
+    "gold_pairs": 9034,
+    "clusters": 599,
+    "train_clusters": 272,
+    "test_clusters": 327,
+    "test_queries": 1490,
+    "train_pairs": 2738,
+    "test_pairs": 6296,
+    "pair_test_ratio": 0.697,
+    "max_cluster_share": 0.207,
+    "splittable": true,
+    "intra_cluster": false,
+    "intra_cluster_mode": null,
+    "anti_leak": true,
+    "leak_ratio": 0.0
+  },
+  "pairs": {
+    "test": 6296
+  },
+  "final": {
+    "cosine": {
+      "filtered": {
+        "MRR": 0.09153095677184975,
+        "Hit@1": 0.00698856416772554,
+        "Hit@5": 0.10046060991105464,
+        "Hit@10": 0.17685832274459976,
+        "MeanRank": 504.90561467598474,
+        "n": 12592
+      },
+      "multiref": {
+        "MRR": 0.2800778820926129,
+        "Hit@1": 0.03355704697986577,
+        "Hit@5": 0.4825503355704698,
+        "Hit@10": 0.6087248322147651,
+        "MeanRank": 1065.0196133645502,
+        "n": 1490
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 1490
+    },
+    "csls": {
+      "filtered": {
+        "MRR": 0.08376003207000424,
+        "Hit@1": 0.027001270648030495,
+        "Hit@5": 0.10744917407878017,
+        "Hit@10": 0.15756035578144853,
+        "MeanRank": 5955.189366264295,
+        "n": 12592
+      },
+      "multiref": {
+        "MRR": 0.32546292991160014,
+        "Hit@1": 0.1738255033557047,
+        "Hit@5": 0.4865771812080537,
+        "Hit@10": 0.5812080536912752,
+        "MeanRank": 2536.4470243592045,
+        "n": 1490
+      },
+      "splittable": true,
+      "intra_cluster": false,
+      "leak_ratio": 0.0,
+      "n_queries": 1490
+    },
+    "classification": {
+      "Precision": 0.3413940256045519,
+      "Recall": 0.6442953020134228,
+      "F1": 0.44630404463040446,
+      "score": "cosine",
+      "threshold": 0.5,
+      "threshold_from": "validation",
+      "validation_F1": 0.4777777777777778,
+      "tol_k": 10,
+      "n_pos": 1490,
+      "n_neg": 1490
+    }
+  },
+  "minutes": 0.2
+}
