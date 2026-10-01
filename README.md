@@ -4,19 +4,19 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=18&duration=3000&pause=900&color=2DD4BF&center=true&vCenter=true&width=760&lines=Eight+entity+alignment+models+in+one+PyTorch+codebase;Six+alignment+tasks+on+the+PGxLOD+knowledge+graph;One+YAML+config%2C+one+command%2C+one+result.json;Benchmark+runner%2C+baseline+and+result+tables+included" alt="Eight entity alignment models in one PyTorch codebase"/>
+<img src="docs/assets/typing.svg" alt="Eight entity alignment models in one PyTorch codebase"/>
 
 <p>
-  <img src="https://img.shields.io/badge/models-8-F5B700?style=for-the-badge&labelColor=0B2A33" alt="8 models"/>
-  <img src="https://img.shields.io/badge/alignment%20tasks-6-3B82F6?style=for-the-badge&labelColor=0B2A33" alt="6 alignment tasks"/>
-  <img src="https://img.shields.io/badge/knowledge%20graph-PGxLOD-2DD4BF?style=for-the-badge&labelColor=0B2A33" alt="PGxLOD"/>
+  <img src="docs/assets/badges/models.svg" alt="8 models"/>
+  <img src="docs/assets/badges/tasks.svg" alt="6 alignment tasks"/>
+  <img src="docs/assets/badges/pgxlod.svg" alt="PGxLOD"/>
 </p>
 <p>
-  <img src="https://img.shields.io/badge/python-%E2%89%A53.9-2DD4BF?style=flat-square&logo=python&logoColor=white&labelColor=0B2A33" alt="Python 3.9+"/>
-  <img src="https://img.shields.io/badge/PyTorch-%E2%89%A52.0-EF4444?style=flat-square&logo=pytorch&logoColor=white&labelColor=0B2A33" alt="PyTorch 2.0+"/>
-  <img src="https://img.shields.io/badge/GPU-CUDA-22C55E?style=flat-square&logo=nvidia&logoColor=white&labelColor=0B2A33" alt="CUDA"/>
-  <img src="https://img.shields.io/badge/configs-YAML-A78BFA?style=flat-square&labelColor=0B2A33" alt="YAML configs"/>
-  <img src="https://img.shields.io/badge/license-MIT-22C55E?style=flat-square&labelColor=0B2A33" alt="MIT license"/>
+  <img src="docs/assets/badges/python.svg" alt="Python 3.9+"/>
+  <img src="docs/assets/badges/pytorch.svg" alt="PyTorch 2.0+"/>
+  <img src="docs/assets/badges/cuda.svg" alt="CUDA"/>
+  <img src="docs/assets/badges/yaml.svg" alt="YAML configs"/>
+  <img src="docs/assets/badges/license.svg" alt="MIT license"/>
 </p>
 
 <p>
@@ -299,5 +299,5 @@ Released under the [MIT License](code/LICENSE).
 
 <div align="center">
 <br/>
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0A3433,50:0B2A33,100:2DD4BF&height=110&section=footer&animation=twinkling" width="100%" alt=""/>
+<img src="docs/assets/footer.svg" width="100%" alt=""/>
 </div>
